@@ -1,26 +1,8 @@
 @import './settings';
 
-html {
-  //height:100%;
-  //@extend %min-height-100;
-}
-
 body {
-  //@extend %background-color;
-  //@extend %min-height-100;
-  //@extend %custom-font;
-  background-image: image-url('bg.jpg');
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-hr {
-  padding: 0;
-  margin: 0;
-  border-color: $border-color;
-  border-style: $border-style;
+  @extend %background-color;
+  @extend %custom-font;
 }
 
 @each $font-weight in 100, 300, 400, 700 {
@@ -39,60 +21,15 @@ hr {
   }
 }
 
-@each $pos in top, bottom, right, left {
-  .border-#{$pos} {
-    border: $border !important;
-  }
+.display-table {
+  display: table;
+  width: 100%;
 }
 
-.bg-white {
-  background-color: #fff !important;
+.display-table-cell {
+  display: table-cell;
+  vertical-align: middle;
 }
-
-.header-color {
-  color: $header-color !important;
-}
-
-.header-color-2 {
-  color: $header-color-2 !important;
-}
-
-.sill-life {
-  @extend %min-height-100;
-  padding-bottom: 0.5rem;
-
-  &.with-background {
-    @extend %background-color;
-  }
-
-}
-
-.content {
-  padding: 0 2rem 2rem 2rem;
-}
-
-.content-padding-side {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.content-padding-top {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
-
-.content-padding-bottom {
-  padding-bottom: 1.25rem;
-}
-
-@media #{$small-only} {
-  .content,
-  .content-padding-side {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
 
 .narrative {
 

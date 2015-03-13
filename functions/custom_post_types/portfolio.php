@@ -1,9 +1,9 @@
 <?php
   $args = array(
-    'post_type' => 'terrariums',
-    'post_label' => 'Terrariums',
-    'post_new_item_label' => 'Add a New Terrarium',
-    'post_slug' => '_terrariums',
+    'post_type' => 'portfolio',
+    'post_label' => 'Portfolio',
+    'post_new_item_label' => 'Add a New Portfolio Item',
+    'post_slug' => '_portfolio',
     'menu_icon' => 'dashicons-admin-site',
     //'taxonomy_type' => 'artwork-category',
     //'taxonomy_label' => 'Artwork',

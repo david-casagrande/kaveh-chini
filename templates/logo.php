@@ -1,9 +1,9 @@
-<div class="logo">
-  <a href="<?php echo get_bloginfo('url'); ?>">
-    <?php
-      $logo = get_template_directory_uri().'/images/logo.png';
-      $name = get_bloginfo('name');
-      echo "<img src=\"{$logo}\" alt=\"{$name}\" />";
-    ?>
-  </a>
+<div class="navigation large-2 columns">
+  <div class="logo">
+    <a href="/">
+      <span class="first-name">Kaveh</span>
+      <span class="last-name">Chini</span>
+      <span class="title">designer</span>
+    </a>
+  </div>
 </div>

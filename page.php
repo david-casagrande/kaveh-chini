@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<div class="content">
-  <?php include('templates/page.php'); ?>
-</div>
+<?php include('templates/page.php'); ?>
 
 <?php get_footer(); ?>

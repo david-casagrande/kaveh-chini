@@ -8,13 +8,3 @@
 </head>
 
 <body>
-  <?php
-    $kaveh_chini_classes = array('kaveh-chini', 'large-8', 'medium-10', 'small-12', 'columns',
-    'large-centered', 'medium-centered', 'small-centered');
-    //if(!is_home()) { $kaveh_chini_classes[] = 'with-background'; }
-  ?>
-    <div class="<?php echo join(' ', $kaveh_chini_classes); ?>">
-      <div class="header">
-        <?php include('templates/logo.php'); ?>
-        <?php include('templates/main-nav.php'); ?>
-      </div>

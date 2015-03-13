@@ -1,0 +1,63 @@
+@import './settings';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: #fff;
+  overflow-y: scroll;
+  background-color: $modal-background-color;
+  padding-top: $modal-header-height;
+
+  .header {
+    height: $modal-header-height;
+    background-color: #4e83b0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    .title {
+      @extend %white;
+      @extend %uppercase;
+      @extend %lighter-font;
+      font-size: 1.375rem;
+      padding-left: 2rem;
+    }
+  }
+
+  .body {
+    padding: 2.25rem 0;
+    z-index: 1;
+    position: relative;
+  }
+
+  .media {
+
+    img {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .narrative {
+    .title {
+      @extend %uppercase;
+      font-size: 1.25rem;
+      border-bottom: 1px solid #fff;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+}
+
+.customize-support {
+  .modal .header {
+    top: $wp-admin-bar-height;
+  }
+  .modal {
+    padding-top: $modal-header-height + $wp-admin-bar-height;
+  }
+}

@@ -1,36 +1,43 @@
-$background-color: #a79b94;
-$header-color: #1a7f65;
-$header-color-2: #ca9e62;
-$button-color: #f38940;
-$custom-font: 'Roboto Slab', serif;
-$border-color: #ccc;
+$background-color: #131509;
+$navigation-color: #989997;
+$navigation-color-dark: #707070;
+$custom-font: 'Open Sans', sans-serif;;
+$border-color: $navigation-color;
 $border-width: 1px;
 $border-style: solid;
 $border: $border-width $border-style $border-color;
-$modal-background-color: rgba(0, 0, 0, 0.75);
+
+$link-color: #4e83b0;
+$modal-header-height: 50px;
+$modal-background-color: #f0f0f0;
+$wp-admin-bar-height: 32px;
 
 %background-color {
   background-color: $background-color;
 }
 
-%min-height-100 {
-  min-height:100%;
+%navigation-color {
+  color: $navigation-color;
 }
 
-%header-color {
-  color: $header-color;
-}
-
-%header-color-2 {
-  color: $header-color-2;
-}
-
-%button-color {
-  color: $button-color;
+%navigation-color-dark {
+  color: $navigation-color-dark;
 }
 
 %custom-font {
   font-family: $custom-font;
+}
+
+%uppercase {
+  text-transform: uppercase;
+}
+
+%white {
+  color: #fff;
+}
+
+%lighter-font {
+  font-weight: lighter;
 }
 
 @mixin rotate($degrees) {
@@ -39,20 +46,4 @@ $modal-background-color: rgba(0, 0, 0, 0.75);
   -ms-transform: rotate($degrees);
   -o-transform: rotate($degrees);
   transform: rotate($degrees);
-}
-
-@mixin chevron($cDirection:'right', $cSize: 20px, $cWidth: 3px, $cColor: white) {
-
-  display: block;
-  width: $cSize;
-  height: $cSize;
-  border-top: 1px solid $cColor;
-  border-right: 1px solid $cColor;
-  border-width: $cWidth;
-
-  @if $cDirection == 'top'    { @include rotate(-45deg);}
-  @if $cDirection == 'right'  { @include rotate(45deg);}
-  @if $cDirection == 'bottom' { @include rotate(135deg);}
-  @if $cDirection == 'left'   { @include rotate(225deg);}
-
 }
