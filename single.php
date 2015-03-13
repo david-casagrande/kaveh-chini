@@ -7,31 +7,23 @@
     <?php include('templates/logo.php'); ?>
     <?php include('templates/main-nav.php'); ?>
     <div class="content large-8 columns">
-      <div class="narrative">
-          <?php
-            if ( have_posts() ) {
-              while ( have_posts() ) { the_post();
-                // echo get_field('title');
-                // echo get_field('narrative');
-                // echo "<div class=\"flex-video\">";
-                //   echo get_field('video');
-                // echo "</div>";
-                //
-                // echo "<img src=".get_field('image')['url']." />";
-                //
-                // echo "<img src=".get_field('thumbnail')['url']." />";
-              }
-            }
-          ?>
-      </div>
+      <div class="narrative"></div>
     </div>
   </div>
 
   <?php
     if ( have_posts() ) {
       while ( have_posts() ) { the_post(); ?>
+        <?php
+          $categories = get_the_terms($post->ID, 'portfolio-category');
+          $category_color = "#4d83af";
+          if($categories) {
+            $category = reset($categories);
+            $category_color = $category->description;
+          }
+        ?>
         <div class="modal">
-          <div class="header display-table">
+          <div class="header display-table" style="background-color: <?php echo $category_color; ?>">
             <div class="display-table-cell title"><?php echo get_field('title'); ?></div>
           </div>
           <div class="body row">
