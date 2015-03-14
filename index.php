@@ -3,12 +3,14 @@
 <?php
   $kaveh_chini_classes = array('kaveh-chini', 'row');
 ?>
-<div class="<?php echo join(' ', $kaveh_chini_classes); ?>">
-  <?php include('templates/logo.php'); ?>
-  <?php include('templates/main-nav.php'); ?>
-  <div class="content large-8 columns">
-    <div class="narrative">
-      What up don
+<div class="main-view">
+  <div class="row">
+    <?php include('templates/logo.php'); ?>
+    <?php include('templates/main-nav.php'); ?>
+    <div class="content large-7 columns">
+      <div class="narrative">
+        What up don
+      </div>
     </div>
   </div>
 </div>

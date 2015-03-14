@@ -8,3 +8,4 @@
 </head>
 
 <body>
+  <?php include('templates/portfolio_categories_css.php'); ?>

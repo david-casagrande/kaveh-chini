@@ -17,13 +17,14 @@
         <?php
           $categories = get_the_terms($post->ID, 'portfolio-category');
           $category_color = "#4d83af";
+          $category_slug = "no-category";
           if($categories) {
             $category = reset($categories);
-            $category_color = $category->description;
+            $category_slug = $category->slug;
           }
         ?>
-        <div class="modal">
-          <div class="header display-table" style="background-color: <?php echo $category_color; ?>">
+        <div class="modal <?php echo $category_slug; ?>">
+          <div class="header display-table">
             <div class="display-table-cell title"><?php echo get_field('title'); ?></div>
           </div>
           <div class="body row">

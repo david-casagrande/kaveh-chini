@@ -40,6 +40,15 @@ $wp-admin-bar-height: 32px;
   font-weight: lighter;
 }
 
+%fixed-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
 @mixin rotate($degrees) {
   -webkit-transform: rotate($degrees);
   -moz-transform: rotate($degrees);

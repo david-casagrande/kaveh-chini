@@ -1,4 +1,4 @@
-<div class="navigation large-2 columns">
+<div class="navigation large-3 columns">
   <div class="main-nav">
     <?php
       $defaults = array(

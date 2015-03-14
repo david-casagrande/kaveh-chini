@@ -19,6 +19,14 @@ body {
 .navigation .logo, .modal .header .title {
   font-weight: lighter; }
 
+.main-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2204,6 +2212,14 @@ body {
 .navigation .logo, .modal .header .title {
   font-weight: lighter; }
 
+.main-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; }
+
 body {
   background-color: #131509; }
 
@@ -2224,6 +2240,14 @@ body {
 
 .navigation .logo, .modal .header .title {
   font-weight: lighter; }
+
+.main-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; }
 
 .font-weight-100 {
   font-weight: 100 !important; }
@@ -2272,6 +2296,11 @@ body {
 .narrative img {
   padding-bottom: 1rem; }
 
+.main-view {
+  padding: 3rem 0; }
+  .customize-support .main-view {
+    top: 32px; }
+
 body {
   background-color: #131509; }
 
@@ -2292,6 +2321,14 @@ body {
 
 .navigation .logo, .modal .header .title {
   font-weight: lighter; }
+
+.main-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; }
 
 .navigation {
   border-left: 1px solid #989997; }
@@ -2318,9 +2355,6 @@ body {
 .content {
   border-left: 1px solid #989997; }
 
-.kaveh-chini {
-  padding: 3rem 0; }
-
 body {
   background-color: #131509; }
 
@@ -2341,6 +2375,14 @@ body {
 
 .navigation .logo, .modal .header .title {
   font-weight: lighter; }
+
+.main-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; }
 
 .modal {
   position: fixed;
