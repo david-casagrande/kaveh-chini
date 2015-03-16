@@ -2471,10 +2471,10 @@ body {
     opacity: 1; }
   .portfolio .portfolio-item:after {
     content: '';
+    height: 101%;
     opacity: 0;
     -webkit-transition: opacity 0.5s ease-in;
     transition: opacity 0.5s ease-in;
-    z-index: 2;
     color: #fff;
     font-size: 1rem;
     font-weight: 300;
