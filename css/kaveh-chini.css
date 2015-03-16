@@ -10,7 +10,7 @@ body {
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.navigation, .navigation .logo, .modal .header .title, .modal .narrative .title {
+.navigation, .navigation .logo, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
@@ -26,6 +26,13 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: auto; }
+
+.portfolio .portfolio-item:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -2203,7 +2210,7 @@ body {
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.navigation, .navigation .logo, .modal .header .title, .modal .narrative .title {
+.navigation, .navigation .logo, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
@@ -2219,6 +2226,13 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: auto; }
+
+.portfolio .portfolio-item:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 body {
   background-color: #131509; }
@@ -2232,7 +2246,7 @@ body {
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.navigation, .navigation .logo, .modal .header .title, .modal .narrative .title {
+.navigation, .navigation .logo, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
@@ -2248,6 +2262,13 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: auto; }
+
+.portfolio .portfolio-item:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 .font-weight-100 {
   font-weight: 100 !important; }
@@ -2285,6 +2306,9 @@ body {
 .no-margin-left {
   margin-left: 0 !important; }
 
+.display-block {
+  display: block !important; }
+
 .display-table {
   display: table;
   width: 100%; }
@@ -2292,6 +2316,9 @@ body {
 .display-table-cell {
   display: table-cell;
   vertical-align: middle; }
+
+.position-relative {
+  position: relative !important; }
 
 .narrative img {
   padding-bottom: 1rem; }
@@ -2313,7 +2340,7 @@ body {
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.navigation, .navigation .logo, .modal .header .title, .modal .narrative .title {
+.navigation, .navigation .logo, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
@@ -2329,6 +2356,13 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: auto; }
+
+.portfolio .portfolio-item:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 .navigation {
   border-left: 1px solid #989997; }
@@ -2367,7 +2401,7 @@ body {
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.navigation, .navigation .logo, .modal .header .title, .modal .narrative .title {
+.navigation, .navigation .logo, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
@@ -2383,6 +2417,13 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: auto; }
+
+.portfolio .portfolio-item:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 .modal {
   position: fixed;
@@ -2421,3 +2462,21 @@ body {
   top: 32px; }
 .customize-support .modal {
   padding-top: 82px; }
+
+.portfolio .portfolio-item {
+  border-top: 1rem solid #fff;
+  padding-top: 0.5rem;
+  cursor: pointer; }
+  .portfolio .portfolio-item:hover:after {
+    opacity: 1; }
+  .portfolio .portfolio-item:after {
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
+    z-index: 2;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 27%; }

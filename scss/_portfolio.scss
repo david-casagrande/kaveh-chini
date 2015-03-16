@@ -1,0 +1,28 @@
+.portfolio {
+  .portfolio-item {
+    border-top: 1rem solid #fff;
+    padding-top: 0.5rem;
+    cursor: pointer;
+
+    &:hover:after {
+      opacity: 1;
+    }
+
+    &:after, {
+      content: '';
+      @extend %uppercase;
+      @extend %absolute-window;
+      opacity: 0;
+      -webkit-transition: opacity 0.5s ease-in;
+      transition: opacity 0.5s ease-in;
+
+      z-index: 2;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 300;
+      text-align: center;
+      padding-top: 27%;
+    }
+
+  }
+}
