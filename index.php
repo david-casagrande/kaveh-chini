@@ -27,10 +27,9 @@
 
               echo "<li class=\"{$category_slug}\">";
                 echo "<div class=\"portfolio-item position-relative\">";
-                  echo "<a href=\"{$url}\" class=\"position-relative\">";
+                  echo "<a href=\"{$url}\" class=\"position-relative display-block\">";
                     echo "<img src=\"{$thumbnail['url']}\" alt=\"{$title}\" />";
                   echo "</a>";
-                  // echo "<div class=\"title\">{$title}</div>";
                 echo "</div>";
               echo "</li>";
             }
