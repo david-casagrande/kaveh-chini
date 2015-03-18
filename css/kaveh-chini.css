@@ -27,7 +27,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2227,7 +2227,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2263,7 +2263,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2357,7 +2357,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2418,7 +2418,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2426,22 +2426,17 @@ body {
   height: 100%; }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   z-index: 2;
   background: #fff;
   overflow-y: scroll;
   background-color: #f0f0f0;
   padding-top: 50px; }
   .modal .header {
-    height: 50px;
-    background-color: #4e83b0;
-    position: fixed;
     top: 0;
     left: 0;
+    height: 50px;
+    position: fixed;
+    background-color: #4e83b0;
     z-index: 2; }
     .modal .header .title {
       font-size: 1.375rem;
@@ -2492,7 +2487,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;

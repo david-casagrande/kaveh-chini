@@ -8,7 +8,6 @@
       $slug = $category->slug;
       $color = $category->description;
       $name = $category->name;
-      print_r($category);
       if($slug && $color) {
         echo ".{$slug} .header { background-color: {$color} !important; }";
         echo ".{$slug} a { color: {$color} !important; }";

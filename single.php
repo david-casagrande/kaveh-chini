@@ -31,11 +31,19 @@
             <div class="media large-8 columns">
               <?php
                 $video = get_field('video');
-                $image = get_field('image');
+                $images = get_field('images');
                 if($video) {
-                  echo "<div class=\"flex-video\">{$video}</div>";
-                } else if($image) {
-                  echo "<img src=\"{$image['url']}\" />";
+                  $pattern = '~<iframe.*</iframe>~';
+                  preg_match_all($pattern, $video, $matches);
+                  foreach ($matches[0] as $match) {
+                    $wrappedframe = '<div class="flex-video">' . $match . '</div>';
+                    echo $wrappedframe;
+                  }
+                } else if($images) {
+                  foreach($images as $img) {
+                    $image = wp_get_attachment_image_src($img, 'full')[0];
+                    echo "<img src=\"{$image}\" />";
+                  }
                 }
               ?>
             </div>

@@ -1,11 +1,7 @@
 @import './settings';
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  @extend %absolute-window;
   z-index: 2;
   background: #fff;
   overflow-y: scroll;
@@ -13,11 +9,12 @@
   padding-top: $modal-header-height;
 
   .header {
-    height: $modal-header-height;
-    background-color: #4e83b0;
-    position: fixed;
     top: 0;
     left: 0;
+    height: $modal-header-height;
+    position: fixed;
+    background-color: #4e83b0;
+
     z-index: 2;
 
     .title {
