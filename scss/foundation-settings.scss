@@ -1,6 +1,11 @@
 @import './foundation/functions';
 @import './settings';
 
+$row-width: rem-calc(1800);
+$include-xl-html-grid-classes: true;
+
+$include-xl-html-block-grid-classes: true;
+
 $header-font-family: $custom-font;
 $header-font-weight: bold;
 $header-font-style: normal;

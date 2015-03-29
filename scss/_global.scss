@@ -52,7 +52,7 @@ body {
 
 .main-view {
   @extend %fixed-window;
-  padding: 3rem 0;
+  padding: 3rem 1rem 3rem 2rem;
 
   .customize-support & {
     top: $wp-admin-bar-height;

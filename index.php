@@ -7,13 +7,13 @@
   <div class="row">
     <?php include('templates/logo.php'); ?>
     <?php include('templates/main-nav.php'); ?>
-    <div class="content large-7 columns">
+    <div class="content large-8 columns">
       <div class="portfolio">
         <?php
           $args = array('post_type'=> 'portfolio');
           $portfolio = query_posts($args);
 
-          echo "<ul class=\"small-block-grid-2 medium-block-grid-2 large-block-grid-2\">";
+          echo "<ul class=\"small-block-grid-2 medium-block-grid-3 large-block-grid-4 xlarge-block-grid-5\">";
             foreach($portfolio as $item) {
               $thumbnail = get_field('thumbnail', $item->ID);
               $title = get_field('title', $item->ID);
