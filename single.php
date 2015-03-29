@@ -30,7 +30,7 @@
           <div class="body row">
             <div class="media large-8 columns">
               <?php
-                $video = get_field('video');
+                $video = get_field('videos');
                 $images = get_field('images');
                 if($video) {
                   $pattern = '~<iframe.*</iframe>~';
@@ -39,7 +39,9 @@
                     $wrappedframe = '<div class="flex-video">' . $match . '</div>';
                     echo $wrappedframe;
                   }
-                } else if($images) {
+                }
+
+                if($images) {
                   foreach($images as $img) {
                     $image = wp_get_attachment_image_src($img, 'full')[0];
                     echo "<img src=\"{$image}\" />";
