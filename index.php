@@ -10,7 +10,7 @@
     <div class="content large-8 columns">
       <div class="portfolio">
         <?php
-          $args = array('post_type'=> 'portfolio');
+          $args = array('post_type'=> 'portfolio', 'posts_per_page' => -1);
           $portfolio = query_posts($args);
 
           echo "<ul class=\"small-block-grid-2 medium-block-grid-3 large-block-grid-4 xlarge-block-grid-5\">";
