@@ -1,4 +1,4 @@
-<div class="navigation large-2 columns">
+<div class="display-table-cell align-top navigation-width">
   <div class="main-nav">
     <?php
       $defaults = array(

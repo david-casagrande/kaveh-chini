@@ -1,55 +1,43 @@
 @import './settings';
 
-.navigation {
-  @extend %navigation-color;
-  @extend %uppercase;
-  border-left: $border;
+.main-nav {
+  @extend %navigation-border;
 
   a {
     @extend %navigation-color;
     @extend %lighter-font;
+    @extend %uppercase;
     display: block;
   }
 
   ul {
     list-style: none;
-    margin: -0.25rem 0 0 0;
+    margin: 0;
     font-size: 1.25rem;
 
     li {
       padding: 0.313rem 0;
-    }
-
-  }
-
-  .logo {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    @extend %uppercase;
-    @extend %lighter-font;
-
-    span {
-      display: block;
-      padding-top: 0.5rem;
 
       &:first-child {
         padding-top: 0;
       }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
     }
 
-    .title {
-      font-size: 1.625rem;
-      padding-top: 0.375rem;
-      @extend %navigation-color-dark;
-    }
-
-    .last-name {
-      @extend %navigation-color-dark;
-    }
   }
 
 }
 
-.content {
-  border-left: $border;
+.logo {
+  @extend %navigation-border;
+}
+
+@media #{$small-only} {
+  .navigation-width {
+    display: none;
+  }
 }
