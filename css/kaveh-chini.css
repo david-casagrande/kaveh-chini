@@ -35,6 +35,10 @@ body {
   border-left: 1px solid #989997;
   padding: 0 20px; }
 
+.main-nav-table-cell, .logo-table-cell {
+  width: 164px;
+  min-width: 164px; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2770,6 +2774,10 @@ body {
   border-left: 1px solid #989997;
   padding: 0 20px; }
 
+.main-nav-table-cell, .logo-table-cell {
+  width: 164px;
+  min-width: 164px; }
+
 body {
   background-color: #131509; }
 
@@ -2806,6 +2814,10 @@ body {
 .main-nav, .logo, .content {
   border-left: 1px solid #989997;
   padding: 0 20px; }
+
+.main-nav-table-cell, .logo-table-cell {
+  width: 164px;
+  min-width: 164px; }
 
 .font-weight-100 {
   font-weight: 100 !important; }
@@ -2846,31 +2858,22 @@ body {
 .display-block {
   display: block !important; }
 
-.display-table {
+.display-table, .main-view-table {
   display: table;
   width: 100%; }
 
-.display-table-cell {
+.display-table-cell, .main-nav-table-cell, .logo-table-cell {
   display: table-cell;
   vertical-align: middle; }
 
-.align-top {
+.align-top, .main-nav-table-cell, .logo-table-cell {
   vertical-align: top; }
 
 .position-relative {
   position: relative !important; }
 
-.navigation-width {
-  width: 164px;
-  min-width: 164px; }
-
 .narrative img {
   padding-bottom: 1rem; }
-
-.main-view {
-  padding: 3rem 2rem; }
-  .customize-support .main-view {
-    top: 32px; }
 
 body {
   background-color: #131509; }
@@ -2909,6 +2912,64 @@ body {
   border-left: 1px solid #989997;
   padding: 0 20px; }
 
+.main-nav-table-cell, .logo-table-cell {
+  width: 164px;
+  min-width: 164px; }
+
+.main-view {
+  padding: 2.375rem 2rem; }
+  .customize-support .main-view {
+    top: 32px; }
+
+@media only screen and (max-width: 40em) {
+  .main-view-table {
+    display: block; }
+  .main-view {
+    padding-top: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; } }
+
+body {
+  background-color: #131509; }
+
+.main-nav a {
+  color: #989997; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
+  text-transform: uppercase; }
+
+.modal .header .title {
+  color: #fff; }
+
+.main-nav a, .modal .header .title {
+  font-weight: lighter; }
+
+.main-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; }
+
+.modal, .portfolio .portfolio-item:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.main-nav, .logo, .content {
+  border-left: 1px solid #989997;
+  padding: 0 20px; }
+
+.main-nav-table-cell, .logo-table-cell {
+  width: 164px;
+  min-width: 164px; }
+
 .main-nav a {
   display: block; }
 .main-nav ul {
@@ -2923,8 +2984,68 @@ body {
       padding-bottom: 0; }
 
 @media only screen and (max-width: 40em) {
-  .navigation-width {
+  .main-nav-table-cell {
+    display: block;
+    width: auto !important; }
+  .main-nav {
+    border: 0 !important;
+    padding: 0 !important; }
+  .main-nav {
     display: none; } }
+
+body {
+  background-color: #131509; }
+
+.main-nav a {
+  color: #989997; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
+  text-transform: uppercase; }
+
+.modal .header .title {
+  color: #fff; }
+
+.main-nav a, .modal .header .title {
+  font-weight: lighter; }
+
+.main-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; }
+
+.modal, .portfolio .portfolio-item:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.main-nav, .logo, .content {
+  border-left: 1px solid #989997;
+  padding: 0 20px; }
+
+.main-nav-table-cell, .logo-table-cell {
+  width: 164px;
+  min-width: 164px; }
+
+@media only screen and (max-width: 40em) {
+  .logo-table-cell {
+    display: block;
+    width: auto !important; }
+  .logo {
+    border: 0 !important;
+    padding: 0 !important; }
+  .logo {
+    height: 150px; }
+    .logo img {
+      height: 100px;
+      width: auto; } }
 
 .content {
   padding-right: 0 !important; }
@@ -2970,6 +3091,10 @@ body {
 .main-nav, .logo, .content {
   border-left: 1px solid #989997;
   padding: 0 20px; }
+
+.main-nav-table-cell, .logo-table-cell {
+  width: 164px;
+  min-width: 164px; }
 
 .modal {
   z-index: 2;
@@ -3040,6 +3165,10 @@ body {
 .main-nav, .logo, .content {
   border-left: 1px solid #989997;
   padding: 0 20px; }
+
+.main-nav-table-cell, .logo-table-cell {
+  width: 164px;
+  min-width: 164px; }
 
 .portfolio .portfolio-item {
   border-top: 1rem solid #fff;

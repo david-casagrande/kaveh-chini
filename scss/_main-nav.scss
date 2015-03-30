@@ -1,5 +1,11 @@
 @import './settings';
 
+.main-nav-table-cell {
+  @extend %navigation-width;
+  @extend .display-table-cell;
+  @extend .align-top;
+}
+
 .main-nav {
   @extend %navigation-border;
 
@@ -32,12 +38,21 @@
 
 }
 
-.logo {
-  @extend %navigation-border;
-}
+
 
 @media #{$small-only} {
-  .navigation-width {
+  .main-nav-table-cell {
+    display: block;
+    width: auto !important;
+  }
+
+  .main-nav {
+    border: 0 !important;
+    padding: 0 !important;
+  }
+
+  .main-nav {
     display: none;
   }
+
 }

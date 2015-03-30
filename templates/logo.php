@@ -1,4 +1,4 @@
-<div class="display-table-cell align-top navigation-width">
+<div class="logo-table-cell">
   <div class="logo">
     <a href="/">
       <!-- <span class="first-name">Kaveh</span>

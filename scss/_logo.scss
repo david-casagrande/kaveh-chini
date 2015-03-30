@@ -1,0 +1,35 @@
+@import './settings';
+
+.logo-table-cell {
+  @extend %navigation-width;
+  @extend .display-table-cell;
+  @extend .align-top;
+}
+
+.logo {
+  @extend %navigation-border;
+}
+
+@media #{$small-only} {
+
+  .logo-table-cell {
+    display: block;
+    width: auto !important;
+  }
+
+  .logo {
+    border: 0 !important;
+    padding: 0 !important;
+  }
+
+  .logo {
+    height: 150px;
+
+    img {
+      height: 100px;
+      width: auto;
+    }
+
+  }
+
+}

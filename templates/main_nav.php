@@ -1,4 +1,4 @@
-<div class="display-table-cell align-top navigation-width">
+<div class="main-nav-table-cell">
   <div class="main-nav">
     <?php
       $defaults = array(

@@ -66,6 +66,11 @@ $navigation-width: 164px; //$logo-width + ($navigation-padding*2);
   padding: 0 $navigation-padding;
 }
 
+%navigation-width {
+  width: $navigation-width;
+  min-width: $navigation-width;
+}
+
 @mixin rotate($degrees) {
   -webkit-transform: rotate($degrees);
   -moz-transform: rotate($degrees);
