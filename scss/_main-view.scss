@@ -1,0 +1,28 @@
+@import './settings';
+
+.main-view-table {
+  @extend .display-table;
+}
+
+.main-view {
+
+  @extend %fixed-window;
+  padding: 2.375rem 2rem;
+
+  .customize-support & {
+    top: $wp-admin-bar-height;
+  }
+
+}
+
+@media #{$small-only} {
+  .main-view-table {
+    display: block;
+  }
+
+  .main-view {
+    padding-top: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

@@ -1,0 +1,56 @@
+@import './settings';
+
+.main-nav-table-cell {
+  @extend %navigation-width;
+  @extend .display-table-cell;
+  @extend .align-top;
+}
+
+.main-nav {
+  @extend %navigation-border;
+
+  a {
+    @extend %navigation-color;
+    @extend %lighter-font;
+    @extend %uppercase;
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    font-size: 1.25rem;
+
+    li {
+      padding: 0.313rem 0;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+    }
+
+  }
+
+}
+
+@media #{$small-only} {
+  .main-nav-table-cell {
+    display: block;
+    width: auto !important;
+  }
+
+  .main-nav {
+    border: 0 !important;
+    padding: 0 !important;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+}

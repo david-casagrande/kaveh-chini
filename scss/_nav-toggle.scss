@@ -1,0 +1,64 @@
+@import './settings';
+
+.mobile-nav-toggle {
+  display: none;
+  text-align: right;
+  vertical-align: middle;
+}
+
+//shamelessly stolen from http://codepen.io/elijahmanor/pen/Igpoe
+
+.nav-toggle {
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  display: inline-block;
+
+  span, span:before, span:after {
+    cursor: pointer;
+    border-radius: 10px;
+    height: 5px;
+    width: 35px;
+    background: $nav-toggle-color;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 500ms ease-in-out;
+  }
+
+  span:before {
+    top: -10px;
+  }
+
+  span:after {
+    bottom: -10px;
+  }
+
+  &.active {
+
+    span {
+      background-color: transparent;
+    }
+
+    span:before, span:after {
+      top: 0;
+    }
+
+    span:before {
+      transform: rotate(45deg);
+    }
+
+    span:after {
+      transform: rotate(-45deg);
+    }
+
+  }
+
+}
+
+@media #{$small-only} {
+
+  .mobile-nav-toggle {
+    display: table-cell;
+  }
+
+}
