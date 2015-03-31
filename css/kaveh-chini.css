@@ -3036,16 +3036,94 @@ body {
 
 @media only screen and (max-width: 40em) {
   .logo-table-cell {
-    display: block;
-    width: auto !important; }
+    display: table;
+    width: 100% !important;
+    height: 150px; }
   .logo {
+    display: table-cell;
+    vertical-align: middle;
     border: 0 !important;
     padding: 0 !important; }
-  .logo {
-    height: 150px; }
     .logo img {
       height: 100px;
       width: auto; } }
+
+body {
+  background-color: #131509; }
+
+.main-nav a {
+  color: #989997; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
+  text-transform: uppercase; }
+
+.modal .header .title {
+  color: #fff; }
+
+.main-nav a, .modal .header .title {
+  font-weight: lighter; }
+
+.main-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; }
+
+.modal, .portfolio .portfolio-item:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.main-nav, .logo, .content {
+  border-left: 1px solid #989997;
+  padding: 0 20px; }
+
+.main-nav-table-cell, .logo-table-cell {
+  width: 164px;
+  min-width: 164px; }
+
+.mobile-nav-toggle {
+  display: none;
+  text-align: right;
+  vertical-align: middle; }
+
+.nav-toggle {
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  display: inline-block; }
+  .nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 10px;
+    height: 5px;
+    width: 35px;
+    background: #d8d8d8;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 500ms ease-in-out; }
+  .nav-toggle span:before {
+    top: -10px; }
+  .nav-toggle span:after {
+    bottom: -10px; }
+  .nav-toggle.active span {
+    background-color: transparent; }
+  .nav-toggle.active span:before, .nav-toggle.active span:after {
+    top: 0; }
+  .nav-toggle.active span:before {
+    transform: rotate(45deg); }
+  .nav-toggle.active span:after {
+    transform: rotate(-45deg); }
+
+@media only screen and (max-width: 40em) {
+  .mobile-nav-toggle {
+    display: table-cell; } }
 
 .content {
   padding-right: 0 !important; }

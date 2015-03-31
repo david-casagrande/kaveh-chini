@@ -4,7 +4,7 @@
       $args = array('post_type'=> 'portfolio', 'posts_per_page' => -1);
       $portfolio = query_posts($args);
 
-      echo "<ul class=\"small-block-grid-2 medium-block-grid-2 large-block-grid-2 xlarge-block-grid-3 xxlarge-4\">";
+      echo "<ul class=\"small-block-grid-2 medium-block-grid-2 large-block-grid-2 xlarge-block-grid-3 xxlarge-block-grid-4\">";
         foreach($portfolio as $item) {
           $thumbnail = get_field('thumbnail', $item->ID);
           $title = get_field('title', $item->ID);

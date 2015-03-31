@@ -13,17 +13,16 @@
 @media #{$small-only} {
 
   .logo-table-cell {
-    display: block;
-    width: auto !important;
+    display: table;
+    width: 100% !important;
+    height: 150px;
   }
 
   .logo {
+    display: table-cell;
+    vertical-align: middle;
     border: 0 !important;
     padding: 0 !important;
-  }
-
-  .logo {
-    height: 150px;
 
     img {
       height: 100px;
