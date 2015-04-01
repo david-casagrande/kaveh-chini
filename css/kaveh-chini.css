@@ -3276,3 +3276,7 @@ body {
     transition: opacity 0.5s ease-in; }
   .portfolio .portfolio-item:hover a {
     opacity: 0; }
+
+@media only screen and (max-width: 40em) {
+  .portfolio .portfolio-item:hover a {
+    opacity: 1; } }
