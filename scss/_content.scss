@@ -1,15 +1,13 @@
 .content {
-
   @extend %navigation-border;
   padding-right: 0 !important;
-
 }
 
 @media #{$small-only} {
 
   .content {
     border: 0 !important;
-    padding: 0 !important;
+    padding: 1.25rem $mobile-lr-padding 0 $mobile-lr-padding !important;
   }
 
 }

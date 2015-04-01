@@ -41,16 +41,29 @@
 @media #{$small-only} {
   .main-nav-table-cell {
     display: block;
+    max-height: 0;
+    overflow: hidden;
     width: auto !important;
+    background-color: #1a1d0f;
+    transition: max-height 800ms;
+
+    &.display-block {
+      max-height: 500px;
+    }
   }
 
   .main-nav {
     border: 0 !important;
-    padding: 0 !important;
-  }
+    padding: 0.563rem $mobile-lr-padding 0.875rem !important;
 
-  .main-nav {
-    display: none;
+    ul {
+      font-size: 2.75rem;
+
+      li {
+        padding: 0.5rem 0;
+      }
+
+    }
   }
 
 }

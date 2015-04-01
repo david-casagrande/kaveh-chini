@@ -1,0 +1,1 @@
+!function(){var t=document.querySelector(".nav-toggle");t.addEventListener("click",function(t){t.preventDefault(),this.classList.toggle("active"),console.log(this.classList)})}();

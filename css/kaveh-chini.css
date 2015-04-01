@@ -2925,9 +2925,7 @@ body {
   .main-view-table {
     display: block; }
   .main-view {
-    padding-top: 0;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem; } }
+    padding: 0; } }
 
 body {
   background-color: #131509; }
@@ -2986,12 +2984,20 @@ body {
 @media only screen and (max-width: 40em) {
   .main-nav-table-cell {
     display: block;
-    width: auto !important; }
+    max-height: 0;
+    overflow: hidden;
+    width: auto !important;
+    background-color: #1a1d0f;
+    transition: max-height 800ms; }
+    .main-nav-table-cell.display-block {
+      max-height: 500px; }
   .main-nav {
     border: 0 !important;
-    padding: 0 !important; }
-  .main-nav {
-    display: none; } }
+    padding: 0.563rem 1.5rem 0.875rem !important; }
+    .main-nav ul {
+      font-size: 2.75rem; }
+      .main-nav ul li {
+        padding: 0.5rem 0; } }
 
 body {
   background-color: #131509; }
@@ -3038,7 +3044,8 @@ body {
   .logo-table-cell {
     display: table;
     width: 100% !important;
-    height: 148px; }
+    height: 148px;
+    padding: 0 1.5rem; }
   .logo {
     display: table-cell;
     vertical-align: middle;
@@ -3131,7 +3138,7 @@ body {
 @media only screen and (max-width: 40em) {
   .content {
     border: 0 !important;
-    padding: 0 !important; } }
+    padding: 1.25rem 1.5rem 0 1.5rem !important; } }
 
 body {
   background-color: #131509; }

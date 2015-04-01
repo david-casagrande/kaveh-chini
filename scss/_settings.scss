@@ -17,6 +17,8 @@ $logo-width: 157px;
 $navigation-padding: 20px;
 $navigation-width: 164px; //$logo-width + ($navigation-padding*2);
 
+$mobile-lr-padding: 1.5rem;
+
 %background-color {
   background-color: $background-color;
 }
