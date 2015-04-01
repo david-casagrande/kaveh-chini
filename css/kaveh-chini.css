@@ -3038,7 +3038,7 @@ body {
   .logo-table-cell {
     display: table;
     width: 100% !important;
-    height: 150px; }
+    height: 148px; }
   .logo {
     display: table-cell;
     vertical-align: middle;
@@ -3096,22 +3096,22 @@ body {
 
 .nav-toggle {
   cursor: pointer;
-  padding: 10px 35px 16px 0px;
+  padding: 10px 75px 16px 0px;
   display: inline-block; }
   .nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
     cursor: pointer;
-    border-radius: 10px;
-    height: 5px;
-    width: 35px;
+    border-radius: 4px;
+    height: 10px;
+    width: 75px;
     background: #d8d8d8;
     position: absolute;
     display: block;
     content: '';
     transition: all 500ms ease-in-out; }
   .nav-toggle span:before {
-    top: -10px; }
+    top: -18px; }
   .nav-toggle span:after {
-    bottom: -10px; }
+    bottom: -18px; }
   .nav-toggle.active span {
     background-color: transparent; }
   .nav-toggle.active span:before, .nav-toggle.active span:after {
