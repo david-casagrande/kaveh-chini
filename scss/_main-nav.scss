@@ -14,6 +14,7 @@
     @extend %lighter-font;
     @extend %uppercase;
     display: block;
+    transition: color 500ms;
   }
 
   ul {

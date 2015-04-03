@@ -13,6 +13,7 @@
         echo ".{$slug} a { color: {$color} !important; }";
         echo ".{$slug} .portfolio-item { border-color: {$color} !important; }";
         echo ".{$slug} .portfolio-item:after { background-color: {$color} !important; content: '{$name}'; }";
+        echo ".{$slug}-nav.current-menu-item a, .{$slug}-nav a:hover { color: {$color} !important; }";
       }
     }
   echo "</style>";

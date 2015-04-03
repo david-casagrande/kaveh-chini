@@ -2969,7 +2969,8 @@ body {
   min-width: 164px; }
 
 .main-nav a {
-  display: block; }
+  display: block;
+  transition: color 500ms; }
 .main-nav ul {
   list-style: none;
   margin: 0;
