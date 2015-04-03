@@ -3260,6 +3260,8 @@ body {
   border-top: 1rem solid #fff;
   cursor: pointer;
   overflow: hidden; }
+  .portfolio .portfolio-item img {
+    width: 100%; }
   .portfolio .portfolio-item:after {
     content: '';
     height: 101%;
