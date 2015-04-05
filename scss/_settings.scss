@@ -1,6 +1,7 @@
 $background-color: #131509;
 $navigation-color: #989997;
 $navigation-color-dark: #707070;
+$navigation-default-hover-color: #786fb2;
 $nav-toggle-color: #d8d8d8;
 $custom-font: 'Open Sans', sans-serif;;
 $border-color: $navigation-color;
@@ -72,6 +73,10 @@ $mobile-lr-padding: 1.5rem;
 %navigation-width {
   width: $navigation-width;
   min-width: $navigation-width;
+}
+
+%navigation-hover-color {
+  color: $navigation-default-hover-color;
 }
 
 @mixin rotate($degrees) {

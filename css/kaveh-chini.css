@@ -39,6 +39,9 @@ body {
   width: 164px;
   min-width: 164px; }
 
+.main-nav a:hover, .main-nav ul li.current-menu-item a {
+  color: #786fb2; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2778,6 +2781,9 @@ body {
   width: 164px;
   min-width: 164px; }
 
+.main-nav a:hover, .main-nav ul li.current-menu-item a {
+  color: #786fb2; }
+
 body {
   background-color: #131509; }
 
@@ -2818,6 +2824,9 @@ body {
 .main-nav-table-cell, .logo-table-cell {
   width: 164px;
   min-width: 164px; }
+
+.main-nav a:hover, .main-nav ul li.current-menu-item a {
+  color: #786fb2; }
 
 .font-weight-100 {
   font-weight: 100 !important; }
@@ -2916,6 +2925,9 @@ body {
   width: 164px;
   min-width: 164px; }
 
+.main-nav a:hover, .main-nav ul li.current-menu-item a {
+  color: #786fb2; }
+
 .main-view {
   padding: 2.375rem 2rem; }
   .customize-support .main-view {
@@ -2967,6 +2979,9 @@ body {
 .main-nav-table-cell, .logo-table-cell {
   width: 164px;
   min-width: 164px; }
+
+.main-nav a:hover, .main-nav ul li.current-menu-item a {
+  color: #786fb2; }
 
 .main-nav a {
   display: block;
@@ -3041,6 +3056,9 @@ body {
   width: 164px;
   min-width: 164px; }
 
+.main-nav a:hover, .main-nav ul li.current-menu-item a {
+  color: #786fb2; }
+
 @media only screen and (max-width: 40em) {
   .logo-table-cell {
     display: table;
@@ -3096,6 +3114,9 @@ body {
 .main-nav-table-cell, .logo-table-cell {
   width: 164px;
   min-width: 164px; }
+
+.main-nav a:hover, .main-nav ul li.current-menu-item a {
+  color: #786fb2; }
 
 .mobile-nav-toggle {
   display: none;
@@ -3182,6 +3203,9 @@ body {
   width: 164px;
   min-width: 164px; }
 
+.main-nav a:hover, .main-nav ul li.current-menu-item a {
+  color: #786fb2; }
+
 .modal {
   z-index: 2;
   background: #fff;
@@ -3255,6 +3279,9 @@ body {
 .main-nav-table-cell, .logo-table-cell {
   width: 164px;
   min-width: 164px; }
+
+.main-nav a:hover, .main-nav ul li.current-menu-item a {
+  color: #786fb2; }
 
 .portfolio .portfolio-item {
   border-top: 1rem solid #fff;

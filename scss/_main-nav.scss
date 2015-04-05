@@ -15,6 +15,10 @@
     @extend %uppercase;
     display: block;
     transition: color 500ms;
+
+    &:hover {
+      @extend %navigation-hover-color;
+    }
   }
 
   ul {
@@ -31,6 +35,10 @@
 
       &:last-child {
         padding-bottom: 0;
+      }
+
+      &.current-menu-item a {
+        @extend %navigation-hover-color;
       }
 
     }
