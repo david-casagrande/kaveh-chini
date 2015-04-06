@@ -53,3 +53,7 @@ body {
     @extend %button-color;
   }
 }
+
+.page-narrative {
+  @extend %navigation-color;
+}
