@@ -14,19 +14,21 @@ $nav-toggle-offset: 18px;
 
 .nav-toggle {
   cursor: pointer;
-  padding: 10px $nav-toggle-width 16px 0px;
   display: inline-block;
+  padding: 10px $nav-toggle-width 16px 0;
 
-  span, span:before, span:after {
-    cursor: pointer;
-    border-radius: 4px;
-    height: $nav-toggle-height;
-    width: $nav-toggle-width;
+  span,
+  span:before,
+  span:after {
     background: $nav-toggle-color;
-    position: absolute;
-    display: block;
+    border-radius: 4px;
     content: '';
+    cursor: pointer;
+    display: block;
+    height: $nav-toggle-height;
+    position: absolute;
     transition: all 500ms ease-in-out;
+    width: $nav-toggle-width;
   }
 
   span:before {
@@ -43,7 +45,8 @@ $nav-toggle-offset: 18px;
       background-color: transparent;
     }
 
-    span:before, span:after {
+    span:before,
+    span:after {
       top: 0;
     }
 

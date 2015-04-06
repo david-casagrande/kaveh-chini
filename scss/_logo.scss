@@ -2,8 +2,8 @@
 
 .logo-table-cell {
   @extend %navigation-width;
-  @extend .display-table-cell;
-  @extend .align-top;
+  @extend %display-table-cell;
+  @extend %align-top;
 }
 
 .logo {
@@ -14,16 +14,16 @@
 
   .logo-table-cell {
     display: table;
-    width: 100% !important;
     height: 148px;
     padding: 0 $mobile-lr-padding;
+    width: 100% !important;
   }
 
   .logo {
-    display: table-cell;
-    vertical-align: middle;
     border: 0 !important;
+    display: table-cell;
     padding: 0 !important;
+    vertical-align: middle;
 
     img {
       height: 100px;

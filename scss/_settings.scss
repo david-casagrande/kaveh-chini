@@ -2,8 +2,9 @@ $background-color: #131509;
 $navigation-color: #989997;
 $navigation-color-dark: #707070;
 $navigation-default-hover-color: #786fb2;
+$navigation-mobile-background-color: #1a1d0f;
 $nav-toggle-color: #d8d8d8;
-$custom-font: 'Open Sans', sans-serif;;
+$custom-font: 'Open Sans', sans-serif;
 $border-color: $navigation-color;
 $border-width: 1px;
 $border-style: solid;
@@ -52,20 +53,20 @@ $mobile-lr-padding: 1.5rem;
 }
 
 %fixed-window {
+  height: 100%;
+  left: 0;
+  overflow-y: auto;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  overflow-y: auto;
 }
 
 %absolute-window {
+  height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
 }
 
 %navigation-border {
@@ -74,8 +75,8 @@ $mobile-lr-padding: 1.5rem;
 }
 
 %navigation-width {
-  width: $navigation-width;
   min-width: $navigation-width;
+  width: $navigation-width;
 }
 
 %navigation-hover-color {
@@ -86,10 +87,20 @@ $mobile-lr-padding: 1.5rem;
   width: 100%;
 }
 
+%display-table {
+  display: table;
+  width: 100%;
+}
+
+%display-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+%align-top {
+  vertical-align: top;
+}
+
 @mixin rotate($degrees) {
-  -webkit-transform: rotate($degrees);
-  -moz-transform: rotate($degrees);
-  -ms-transform: rotate($degrees);
-  -o-transform: rotate($degrees);
   transform: rotate($degrees);
 }

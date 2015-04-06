@@ -26,17 +26,15 @@ body {
 }
 
 .display-table {
-  display: table;
-  width: 100%;
+  @extend %display-table;
 }
 
 .display-table-cell {
-  display: table-cell;
-  vertical-align: middle;
+  @extend %display-table-cell;
 }
 
 .align-top {
-  vertical-align: top;
+  @extend %align-top;
 }
 
 .position-relative {

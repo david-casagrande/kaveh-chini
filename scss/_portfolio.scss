@@ -14,7 +14,6 @@
 
   .portfolio-items {
     opacity: 0;
-    -webkit-transition: opacity 0.5s ease-in;
     transition: opacity 0.5s ease-in;
   }
 
@@ -38,25 +37,23 @@
     }
 
     &:after, {
-      content: '';
       @extend %uppercase;
       @extend %absolute-window;
-      height: 101%; //weird hack to make sure overlay covers the image completely
-
-      z-index: 1;
+      content: '';
       font-size: 1.25rem;
       font-weight: 300;
-      text-align: center;
+      height: 101%; //weird hack to make sure overlay covers the image completely
       padding-top: 29.5%;
+      text-align: center;
+      z-index: 1;
     }
 
     a {
-      z-index: 2;
+      background-color: $background-color;
       opacity: 1;
       padding-top: 0.5rem;
-      background-color: $background-color;
-      -webkit-transition: opacity 0.5s ease-in;
       transition: opacity 0.5s ease-in;
+      z-index: 2;
     }
 
     &:hover a {

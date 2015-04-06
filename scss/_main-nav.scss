@@ -2,8 +2,8 @@
 
 .main-nav-table-cell {
   @extend %navigation-width;
-  @extend .display-table-cell;
-  @extend .align-top;
+  @extend %display-table-cell;
+  @extend %align-top;
 }
 
 .main-nav {
@@ -22,9 +22,9 @@
   }
 
   ul {
+    font-size: 1.25rem;
     list-style: none;
     margin: 0;
-    font-size: 1.25rem;
 
     li {
       padding: 0.313rem 0;
@@ -49,12 +49,12 @@
 
 @media #{$small-only} {
   .main-nav-table-cell {
+    background-color: $navigation-mobile-background-color;
     display: block;
     max-height: 0;
     overflow: hidden;
-    width: auto !important;
-    background-color: #1a1d0f;
     transition: max-height 800ms;
+    width: auto !important;
 
     &.display-block {
       max-height: 500px;
