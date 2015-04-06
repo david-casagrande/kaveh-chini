@@ -22,6 +22,7 @@
 
   //initial state
   imagesLoaded(portfolioItems, function() {
+    portfolioItems.classList.add('loaded');
     var filter = parseFilterUrl(document.location.href);
     updateFilter(filter);
   });
