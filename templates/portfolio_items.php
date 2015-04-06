@@ -1,4 +1,4 @@
-<div class="content display-table-cell">
+<div class="content display-table-cell relative">
   <div class="portfolio">
     <?php
       $args = array('post_type'=> 'portfolio', 'posts_per_page' => -1);

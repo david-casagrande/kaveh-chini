@@ -1,105 +1,112 @@
 (function() {
 
   //mobile nav toggle
-  var navToggle = document.querySelector('.nav-toggle');
+  (function mobileNav() {
+    var navToggle = document.querySelector('.nav-toggle');
 
-  navToggle.addEventListener('click', function(e) {
-    e.preventDefault();
-    this.classList.toggle('active');
-    toggleMainNav();
-  });
+    navToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.classList.toggle('active');
+      toggleMainNav();
+    });
 
-  function toggleMainNav() {
-    var mainNav = document.querySelector('.main-nav-table-cell');
-    mainNav.classList.toggle('display-block');
-  }
+    function toggleMainNav() {
+      var mainNav = document.querySelector('.main-nav-table-cell');
+      mainNav.classList.toggle('display-block');
+    }
+  })();
 
   //portfolio items filter
-  var portfolioItems = document.querySelector('.portfolio-items');
-  if(!portfolioItems) { return; }
+  (function protfolioItemsFilter() {
+    var portfolioItems = document.querySelector('.portfolio-items');
 
-  var iso = new Isotope(portfolioItems);
+    //dont attach if not a portfolio page
+    if(!portfolioItems) { return; }
 
-  //initial state
-  imagesLoaded(portfolioItems, function() {
-    portfolioItems.classList.add('loaded');
-    var filter = parseFilterUrl(document.location.href);
-    updateFilter(filter);
-  });
+    //init Isotope
+    var iso = new Isotope(portfolioItems);
 
-  //for back/forward nav
-  window.onpopstate = function(event) {
-    var filter = parseFilterUrl(document.location.href);
-    updateFilter(filter);
-  };
+    //handle initial state after images have loaded
+    imagesLoaded(portfolioItems, function() {
+      portfolioItems.classList.add('loaded');
+      var filter = parseFilterUrl(document.location.href);
+      updateFilter(filter);
+    });
 
-  //for logo click
-  var logo = document.querySelector('.logo a');
-  logo.addEventListener('click', function(e) {
-    e.preventDefault();
-    updateFilter('home');
-    filterReplaceState(this);
-  });
+    //handle browser back/forward nav
+    window.onpopstate = function() {
+      var filter = parseFilterUrl(document.location.href);
+      updateFilter(filter);
+    };
 
-  //for main-nav
-  var mainNavFilters = document.querySelectorAll('.main-nav a');
-  var allFilters = [];
-  Array.prototype.filter.call(mainNavFilters, function(filter) {
-    var parentClassList = filter.parentElement.classList;
-    if(!parentClassList.contains('filter')) { return; }
-
-    var href = filter.getAttribute('href');
-    var filterName = parseFilterUrl(href);
-    allFilters.push(filterName);
-
-    filter.addEventListener('click', function(e) {
+    //handle logo click
+    var logo = document.querySelector('.logo a');
+    logo.addEventListener('click', function(e) {
       e.preventDefault();
-      updateFilter(filterName);
+      updateFilter('home');
       filterReplaceState(this);
     });
-  });
 
-  function parseFilterUrl(href) {
-    var url = href.split('/'),
-        lastItem = url.pop();
+    //handle main-nav click
+    var mainNavFilters = document.querySelectorAll('.main-nav a');
+    var allFilters = [];
+    Array.prototype.filter.call(mainNavFilters, function(filter) {
+      var parentClassList = filter.parentElement.classList;
+      if(!parentClassList.contains('filter')) { return; }
 
-    if(!lastItem) {
-      lastItem = url.pop();
-    }
+      var href = filter.getAttribute('href');
+      var filterName = parseFilterUrl(href);
+      allFilters.push(filterName);
 
-    return lastItem;
-  }
-
-  function updateFilter(filter) {
-    var filterName;
-
-    if(allFilters.indexOf(filter) < 0) {
-      filterName = '*';
-    } else {
-      filterName = '.' + filter;
-    }
-
-    iso.arrange({ filter: filterName });
-    updateActiveState(filter);
-  }
-
-  function updateActiveState(filter) {
-    var navItems = document.querySelectorAll('.main-nav li');
-    var activeClass = 'current-menu-item';
-
-    Array.prototype.filter.call(navItems, function(item) {
-      var itemClassList = item.classList;
-      itemClassList.remove(activeClass);
-
-      if(itemClassList.contains(filter+'-nav')) {
-        itemClassList.add(activeClass);
-      }
+      filter.addEventListener('click', function(e) {
+        e.preventDefault();
+        updateFilter(filterName);
+        filterReplaceState(this);
+      });
     });
-  }
 
-  function filterReplaceState(href) {
-    history.pushState(null, null, href);
-  }
+    function parseFilterUrl(href) {
+      var url = href.split('/'),
+          lastItem = url.pop();
+
+      if(!lastItem) {
+        lastItem = url.pop();
+      }
+
+      return lastItem;
+    }
+
+    function updateFilter(filter) {
+      var filterName;
+
+      if(allFilters.indexOf(filter) < 0) {
+        filterName = '*';
+      } else {
+        filterName = '.' + filter;
+      }
+
+      iso.arrange({ filter: filterName });
+      updateActiveState(filter);
+    }
+
+    function updateActiveState(filter) {
+      var navItems = document.querySelectorAll('.main-nav li');
+      var activeClass = 'current-menu-item';
+
+      Array.prototype.filter.call(navItems, function(item) {
+        var itemClassList = item.classList;
+        itemClassList.remove(activeClass);
+
+        if(itemClassList.contains(filter+'-nav')) {
+          itemClassList.add(activeClass);
+        }
+      });
+    }
+
+    function filterReplaceState(href) {
+      history.pushState(null, null, href);
+    }
+  })();
 
   // var router = new RouteRecognizer();
   //
