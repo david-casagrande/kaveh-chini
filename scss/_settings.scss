@@ -11,7 +11,10 @@ $border: $border-width $border-style $border-color;
 
 $link-color: #4e83b0;
 $modal-header-height: 50px;
+$modal-header-radius: 6px;
 $modal-background-color: #f0f0f0;
+$modal-body-padding: 2.25rem;
+$modal-narrative-background-color: #dbdbdb;
 $wp-admin-bar-height: 32px;
 
 $logo-width: 157px;
@@ -77,6 +80,10 @@ $mobile-lr-padding: 1.5rem;
 
 %navigation-hover-color {
   color: $navigation-default-hover-color;
+}
+
+%hundred-width {
+  width: 100%;
 }
 
 @mixin rotate($degrees) {

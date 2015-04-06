@@ -1,20 +1,24 @@
 @import './settings';
 
 .modal {
-  @extend %absolute-window;
+  @extend %fixed-window;
   z-index: 2;
-  background: #fff;
   overflow-y: scroll;
-  background-color: $modal-background-color;
   padding-top: $modal-header-height;
+  padding-bottom: $modal-header-height;
+  background-color: rgba(0, 0, 0, 0.75);
+
+  .modal-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 $mobile-lr-padding;
+  }
 
   .header {
-    top: 0;
-    left: 0;
     height: $modal-header-height;
-    position: fixed;
+    border-top-left-radius: $modal-header-radius;
+    border-top-right-radius: $modal-header-radius;
     background-color: #4e83b0;
-
     z-index: 2;
 
     .title {
@@ -23,23 +27,35 @@
       @extend %lighter-font;
       font-size: 1.375rem;
       padding-left: 2rem;
+      padding-top: 0.125rem;
     }
   }
 
   .body {
-    padding: 2.25rem 0;
     z-index: 1;
     position: relative;
+    background-color: $modal-background-color;
+    border-bottom-left-radius: $modal-header-radius;
+    border-bottom-right-radius: $modal-header-radius;
   }
 
   .media {
+    width: 70%;
+    padding: $modal-body-padding $modal-body-padding $modal-body-padding/2;
+    border-bottom-left-radius: $modal-header-radius;
 
     img {
       padding-bottom: 1rem;
+      @extend %hundred-width;
     }
   }
 
   .narrative {
+    width: 30%;
+    padding: $modal-body-padding 1.5rem $modal-body-padding/2;
+    background-color: $modal-narrative-background-color;
+    border-bottom-right-radius: $modal-header-radius;
+
     .title {
       @extend %uppercase;
       font-size: 1.25rem;
@@ -56,5 +72,20 @@
   }
   .modal {
     padding-top: $modal-header-height + $wp-admin-bar-height;
+  }
+}
+
+@media #{$medium-down} {
+  .modal {
+
+    .body, .media, .narrative {
+      display:block;
+      width: 100%;
+    }
+
+    .narrative {
+      border-bottom-left-radius: $modal-header-radius;
+    }
+
   }
 }

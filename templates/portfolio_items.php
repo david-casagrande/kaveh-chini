@@ -10,6 +10,7 @@
           include('portfolio_item.php');
         }
       echo "</ul>";
+      wp_reset_query();
     ?>
   </div>
 </div>

@@ -16,7 +16,7 @@ body {
 .main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
-.main-view {
+.main-view, .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -24,7 +24,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
+.portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -42,6 +42,14 @@ body {
 .main-nav a:hover, .main-nav ul li.current-menu-item a {
   color: #786fb2; }
 
+.modal .media img {
+  width: 100%; }
+
+/* 0, 640px */
+/* 641px, 1024px */
+/* 1025px, 1440px */
+/* 1441px, 1920px */
+/* 1921px */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -369,11 +377,11 @@ meta.foundation-version {
 
 meta.foundation-mq-small {
   font-family: "/only screen/";
-  width: 0; }
+  width: 0em; }
 
 meta.foundation-mq-small-only {
   font-family: "/only screen and (max-width: 40em)/";
-  width: 0; }
+  width: 0em; }
 
 meta.foundation-mq-medium {
   font-family: "/only screen and (min-width:40.063em)/";
@@ -2433,7 +2441,7 @@ th.hide-for-touch {
   .xlarge-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width:120.063em) and (max-width:99999999em) {
+@media only screen and (min-width:120.063em) and (max-width:999999999999) {
   .xxlarge-only-text-left {
     text-align: left !important; }
   .xxlarge-only-text-right {
@@ -2758,7 +2766,7 @@ body {
 .main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
-.main-view {
+.main-view, .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -2766,7 +2774,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
+.portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2783,6 +2791,9 @@ body {
 
 .main-nav a:hover, .main-nav ul li.current-menu-item a {
   color: #786fb2; }
+
+.modal .media img {
+  width: 100%; }
 
 body {
   background-color: #131509; }
@@ -2802,7 +2813,7 @@ body {
 .main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
-.main-view {
+.main-view, .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -2810,7 +2821,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
+.portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2827,6 +2838,9 @@ body {
 
 .main-nav a:hover, .main-nav ul li.current-menu-item a {
   color: #786fb2; }
+
+.modal .media img {
+  width: 100%; }
 
 .font-weight-100 {
   font-weight: 100 !important; }
@@ -2902,7 +2916,7 @@ body {
 .main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
-.main-view {
+.main-view, .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -2910,7 +2924,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
+.portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2927,6 +2941,9 @@ body {
 
 .main-nav a:hover, .main-nav ul li.current-menu-item a {
   color: #786fb2; }
+
+.modal .media img {
+  width: 100%; }
 
 .main-view {
   padding: 2.375rem 2rem; }
@@ -2957,7 +2974,7 @@ body {
 .main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
-.main-view {
+.main-view, .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -2965,7 +2982,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
+.portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2982,6 +2999,9 @@ body {
 
 .main-nav a:hover, .main-nav ul li.current-menu-item a {
   color: #786fb2; }
+
+.modal .media img {
+  width: 100%; }
 
 .main-nav a {
   display: block;
@@ -3033,7 +3053,7 @@ body {
 .main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
-.main-view {
+.main-view, .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -3041,7 +3061,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
+.portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -3058,6 +3078,9 @@ body {
 
 .main-nav a:hover, .main-nav ul li.current-menu-item a {
   color: #786fb2; }
+
+.modal .media img {
+  width: 100%; }
 
 @media only screen and (max-width: 40em) {
   .logo-table-cell {
@@ -3092,7 +3115,7 @@ body {
 .main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
-.main-view {
+.main-view, .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -3100,7 +3123,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
+.portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -3117,6 +3140,9 @@ body {
 
 .main-nav a:hover, .main-nav ul li.current-menu-item a {
   color: #786fb2; }
+
+.modal .media img {
+  width: 100%; }
 
 .mobile-nav-toggle {
   display: none;
@@ -3181,7 +3207,7 @@ body {
 .main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
-.main-view {
+.main-view, .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -3189,7 +3215,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
+.portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -3207,38 +3233,63 @@ body {
 .main-nav a:hover, .main-nav ul li.current-menu-item a {
   color: #786fb2; }
 
+.modal .media img {
+  width: 100%; }
+
 .modal {
   z-index: 2;
-  background: #fff;
   overflow-y: scroll;
-  background-color: #f0f0f0;
-  padding-top: 50px; }
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.75); }
+  .modal .modal-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem; }
   .modal .header {
-    top: 0;
-    left: 0;
     height: 50px;
-    position: fixed;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     background-color: #4e83b0;
     z-index: 2; }
     .modal .header .title {
       font-size: 1.375rem;
-      padding-left: 2rem; }
+      padding-left: 2rem;
+      padding-top: 0.125rem; }
   .modal .body {
-    padding: 2.25rem 0;
     z-index: 1;
-    position: relative; }
-  .modal .media img {
-    padding-bottom: 1rem; }
-  .modal .narrative .title {
-    font-size: 1.25rem;
-    border-bottom: 1px solid #fff;
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.25rem; }
+    position: relative;
+    background-color: #f0f0f0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px; }
+  .modal .media {
+    width: 70%;
+    padding: 2.25rem 2.25rem 1.125rem;
+    border-bottom-left-radius: 6px; }
+    .modal .media img {
+      padding-bottom: 1rem; }
+  .modal .narrative {
+    width: 30%;
+    padding: 2.25rem 1.5rem 1.125rem;
+    background-color: #dbdbdb;
+    border-bottom-right-radius: 6px; }
+    .modal .narrative .title {
+      font-size: 1.25rem;
+      border-bottom: 1px solid #fff;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.25rem; }
 
 .customize-support .modal .header {
   top: 32px; }
 .customize-support .modal {
   padding-top: 82px; }
+
+@media only screen and (max-width:64em) {
+  .modal .body, .modal .media, .modal .narrative {
+    display: block;
+    width: 100%; }
+  .modal .narrative {
+    border-bottom-left-radius: 6px; } }
 
 body {
   background-color: #131509; }
@@ -3258,7 +3309,7 @@ body {
 .main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
-.main-view {
+.main-view, .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -3266,7 +3317,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
+.portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -3283,6 +3334,9 @@ body {
 
 .main-nav a:hover, .main-nav ul li.current-menu-item a {
   color: #786fb2; }
+
+.modal .media img {
+  width: 100%; }
 
 .portfolio .portfolio-loading {
   font-size: 2rem;
