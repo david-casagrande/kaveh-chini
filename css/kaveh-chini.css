@@ -3074,6 +3074,10 @@ body {
       .main-nav ul li {
         padding: 0.5rem 0; } }
 
+@media only screen and (min-width:40.063em) {
+  .main-nav-table-cell.display-block {
+    display: table-cell !important; } }
+
 body {
   background-color: #131509; }
 

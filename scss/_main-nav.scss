@@ -76,3 +76,11 @@
   }
 
 }
+
+//weird hack to make sure this displays as a table-cell
+//when the main nav is open on mobile screen and then gets bigger :/
+@media #{$medium-up} {
+  .main-nav-table-cell.display-block {
+    display: table-cell !important;
+  }
+}
