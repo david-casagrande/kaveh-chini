@@ -23,7 +23,13 @@ gulp.task('minify-sass', ['sass'], function() {
     .pipe(gulp.dest('./css'))
 })
 
-gulp.task('minify-js', function() {
+gulp.task('vendor-js', function() {
+  gulp.src(['./bower_components/isotope/dist/isotope.pkgd.js', './bower_components/imagesloaded/imagesloaded.pkgd.js'])
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('javascript'))
+})
+
+gulp.task('minify-js', ['vendor-js'],function() {
   gulp.src('javascript/*.js')
     .pipe(uglify({
       mangle: true
@@ -35,4 +41,4 @@ gulp.task('watch', function() {
   gulp.watch(scssPath, ['sass', 'minify-sass'])
 })
 
-gulp.task('default', ['watch', 'sass', 'minify-sass', 'minify-js'])
+gulp.task('default', ['watch', 'sass', 'minify-sass', 'minify-js', 'vendor-js'])
