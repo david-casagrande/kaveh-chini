@@ -1,5 +1,6 @@
 (function() {
 
+  //mobile nav toggle
   var navToggle = document.querySelector('.nav-toggle');
 
   navToggle.addEventListener('click', function(e) {
@@ -12,6 +13,112 @@
     var mainNav = document.querySelector('.main-nav-table-cell');
     mainNav.classList.toggle('display-block');
   }
+
+  //portfolio items filter
+  var portfolioItems = document.querySelector('.portfolio-items');
+  if(!portfolioItems) { return; }
+
+  var iso = new Isotope(portfolioItems);
+
+  //initial state
+  imagesLoaded(portfolioItems, function() {
+    var filter = parseFilterUrl(document.location.href);
+    updateFilter(filter);
+  });
+
+  //for back/forward nav
+  window.onpopstate = function(event) {
+    var filter = parseFilterUrl(document.location.href);
+    updateFilter(filter);
+  };
+
+  //for logo click
+  var logo = document.querySelector('.logo a');
+  logo.addEventListener('click', function(e) {
+    e.preventDefault();
+    updateFilter('home');
+    filterReplaceState(this);
+  });
+
+  //for main-nav
+  var mainNavFilters = document.querySelectorAll('.main-nav a');
+  var allFilters = [];
+  Array.prototype.filter.call(mainNavFilters, function(filter) {
+    var parentClassList = filter.parentElement.classList;
+    if(!parentClassList.contains('filter')) { return; }
+
+    var href = filter.getAttribute('href');
+    var filterName = parseFilterUrl(href);
+    allFilters.push(filterName);
+
+    filter.addEventListener('click', function(e) {
+      e.preventDefault();
+      updateFilter(filterName);
+      filterReplaceState(this);
+    });
+  });
+
+  function parseFilterUrl(href) {
+    var url = href.split('/'),
+        lastItem = url.pop();
+
+    if(!lastItem) {
+      lastItem = url.pop();
+    }
+
+    return lastItem;
+  }
+
+  function updateFilter(filter) {
+    var filterName;
+
+    if(allFilters.indexOf(filter) < 0) {
+      filterName = '*';
+    } else {
+      filterName = '.' + filter;
+    }
+
+    iso.arrange({ filter: filterName });
+    updateActiveState(filter);
+  }
+
+  function updateActiveState(filter) {
+    var navItems = document.querySelectorAll('.main-nav li');
+    var activeClass = 'current-menu-item';
+
+    Array.prototype.filter.call(navItems, function(item) {
+      var itemClassList = item.classList;
+      itemClassList.remove(activeClass);
+
+      if(itemClassList.contains(filter+'-nav')) {
+        itemClassList.add(activeClass);
+      }
+    });
+  }
+
+  function filterReplaceState(href) {
+    history.pushState(null, null, href);
+  }
+
+  // var router = new RouteRecognizer();
+  //
+  // router.add([
+  //   { path: '/portfolio/:category', handler: function(category) { console.log(category); } },
+  // ]);
+
+  // mainNavFilters.addEventListener('click', function(e) {
+  //   e.preventDefault();
+  //   console.log(e);
+  // });
+
+  // var iso = new Isotope( '#container', {
+  //   // options
+  // });
+  // $container.isotope({
+  //   // options
+  //   itemSelector: '.item',
+  //   layoutMode: 'fitRows'
+  // });
 
   // var Modal = {
   //
