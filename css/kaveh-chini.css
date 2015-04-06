@@ -1,19 +1,19 @@
 body {
   background-color: #131509; }
 
-.page-narrative, .main-nav a {
+.page-narrative, .main-nav a, .portfolio .portfolio-loading {
   color: #989997; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
+.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title {
+.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view {
@@ -24,7 +24,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2743,19 +2743,19 @@ blockquote, blockquote p {
 body {
   background-color: #131509; }
 
-.page-narrative, .main-nav a {
+.page-narrative, .main-nav a, .portfolio .portfolio-loading {
   color: #989997; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
+.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title {
+.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view {
@@ -2766,7 +2766,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2787,19 +2787,19 @@ body {
 body {
   background-color: #131509; }
 
-.page-narrative, .main-nav a {
+.page-narrative, .main-nav a, .portfolio .portfolio-loading {
   color: #989997; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
+.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title {
+.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view {
@@ -2810,7 +2810,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2887,19 +2887,19 @@ body {
 body {
   background-color: #131509; }
 
-.page-narrative, .main-nav a {
+.page-narrative, .main-nav a, .portfolio .portfolio-loading {
   color: #989997; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
+.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title {
+.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view {
@@ -2910,7 +2910,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2942,19 +2942,19 @@ body {
 body {
   background-color: #131509; }
 
-.page-narrative, .main-nav a {
+.page-narrative, .main-nav a, .portfolio .portfolio-loading {
   color: #989997; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
+.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title {
+.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view {
@@ -2965,7 +2965,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -3018,19 +3018,19 @@ body {
 body {
   background-color: #131509; }
 
-.page-narrative, .main-nav a {
+.page-narrative, .main-nav a, .portfolio .portfolio-loading {
   color: #989997; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
+.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title {
+.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view {
@@ -3041,7 +3041,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -3077,19 +3077,19 @@ body {
 body {
   background-color: #131509; }
 
-.page-narrative, .main-nav a {
+.page-narrative, .main-nav a, .portfolio .portfolio-loading {
   color: #989997; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
+.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title {
+.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view {
@@ -3100,7 +3100,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -3160,24 +3160,25 @@ body {
 @media only screen and (max-width: 40em) {
   .content {
     border: 0 !important;
-    padding: 1.25rem 1.5rem 0 1.5rem !important; } }
+    padding: 1.25rem 1.5rem 0 1.5rem !important;
+    display: block !important; } }
 
 body {
   background-color: #131509; }
 
-.page-narrative, .main-nav a {
+.page-narrative, .main-nav a, .portfolio .portfolio-loading {
   color: #989997; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
+.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title {
+.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view {
@@ -3188,7 +3189,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -3242,19 +3243,19 @@ body {
 body {
   background-color: #131509; }
 
-.page-narrative, .main-nav a {
+.page-narrative, .main-nav a, .portfolio .portfolio-loading {
   color: #989997; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
 
-.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-item:after {
+.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   text-transform: uppercase; }
 
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title {
+.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view {
@@ -3265,7 +3266,7 @@ body {
   height: 100%;
   overflow-y: auto; }
 
-.modal, .portfolio .portfolio-item:after {
+.modal, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -3283,18 +3284,18 @@ body {
 .main-nav a:hover, .main-nav ul li.current-menu-item a {
   color: #786fb2; }
 
-.portfolio:before {
-  content: 'Loading...';
-  color: #989997;
-  position: absolute;
-  top: 0;
-  left: 0; }
+.portfolio .portfolio-loading {
+  font-size: 2rem;
+  text-align: center;
+  top: 80px; }
 .portfolio .portfolio-items {
   opacity: 0;
   -webkit-transition: opacity 0.5s ease-in;
   transition: opacity 0.5s ease-in; }
-  .portfolio .portfolio-items.loaded {
-    opacity: 1; }
+.portfolio.loaded .portfolio-items {
+  opacity: 1; }
+.portfolio.loaded .portfolio-loading {
+  display: none; }
 .portfolio .portfolio-item {
   border-top: 1rem solid #fff;
   cursor: pointer;

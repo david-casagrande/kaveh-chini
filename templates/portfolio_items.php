@@ -1,5 +1,6 @@
-<div class="content display-table-cell relative">
-  <div class="portfolio">
+<div class="content display-table-cell">
+  <div class="portfolio position-relative">
+    <div class="portfolio-loading">Loading...</div>
     <?php
       $args = array('post_type'=> 'portfolio', 'posts_per_page' => -1);
       $portfolio = query_posts($args);

@@ -2,22 +2,29 @@
 
 .portfolio {
 
-  &:before {
-    content: 'Loading...';
-    color: $navigation-color;
-    position: absolute;
-    top: 0;
-    left: 0;
+  .portfolio-loading {
+    @extend %navigation-color;
+    @extend %uppercase;
+    @extend %lighter-font;
+    @extend  %absolute-window;
+    font-size: 2rem;
+    text-align: center;
+    top: 80px;
   }
-
 
   .portfolio-items {
     opacity: 0;
     -webkit-transition: opacity 0.5s ease-in;
     transition: opacity 0.5s ease-in;
+  }
 
-    &.loaded {
+  &.loaded {
+    .portfolio-items {
       opacity: 1;
+    }
+
+    .portfolio-loading {
+      display: none;
     }
   }
 

@@ -1,4 +1,5 @@
 (function() {
+  'use strict';
 
   //mobile nav toggle
   (function mobileNav() {
@@ -24,11 +25,11 @@
     if(!portfolioItems) { return; }
 
     //init Isotope
-    var iso = new Isotope(portfolioItems);
+    var iso = new Isotope(portfolioItems, { itemSelector: 'li' });
 
     //handle initial state after images have loaded
     imagesLoaded(portfolioItems, function() {
-      portfolioItems.classList.add('loaded');
+      document.querySelector('.portfolio').classList.add('loaded');
       var filter = parseFilterUrl(document.location.href);
       updateFilter(filter);
     });
