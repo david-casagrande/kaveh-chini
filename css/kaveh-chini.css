@@ -2980,7 +2980,7 @@ body {
 
 @media only screen and (max-width: 40em) {
   .main-view-table {
-    display: block; }
+    display: block !important; }
   .main-view {
     padding: 0; } }
 
@@ -3059,7 +3059,7 @@ body {
 @media only screen and (max-width: 40em) {
   .main-nav-table-cell {
     background-color: #1a1d0f;
-    display: block;
+    display: block !important;
     max-height: 0;
     overflow: hidden;
     transition: max-height 800ms;
@@ -3134,7 +3134,7 @@ body {
 
 @media only screen and (max-width: 40em) {
   .logo-table-cell {
-    display: table;
+    display: table !important;
     height: 148px;
     padding: 0 1.5rem;
     width: 100% !important; }

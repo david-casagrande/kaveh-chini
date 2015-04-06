@@ -50,7 +50,7 @@
 @media #{$small-only} {
   .main-nav-table-cell {
     background-color: $navigation-mobile-background-color;
-    display: block;
+    display: block !important;
     max-height: 0;
     overflow: hidden;
     transition: max-height 800ms;

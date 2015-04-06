@@ -17,7 +17,7 @@
 
 @media #{$small-only} {
   .main-view-table {
-    display: block;
+    display: block !important;
   }
 
   .main-view {

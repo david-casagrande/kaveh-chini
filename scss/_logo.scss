@@ -13,7 +13,7 @@
 @media #{$small-only} {
 
   .logo-table-cell {
-    display: table;
+    display: table !important;
     height: 148px;
     padding: 0 $mobile-lr-padding;
     width: 100% !important;
