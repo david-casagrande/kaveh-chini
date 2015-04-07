@@ -176,7 +176,7 @@
       req.onload = function() {
         callback(req);
       };
-      req.open('get', '/wp-admin/admin-ajax?action=portfolio&slug='+slug, true);
+      req.open('get', '/wp-admin/admin-ajax.php?action=portfolio&slug='+slug, true);
       req.send();
     }
 
