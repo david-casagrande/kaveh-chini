@@ -13,7 +13,7 @@ body {
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
+.main-nav a, .modal .header .title, .modal .header .close-modal, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view, .modal {
@@ -2769,7 +2769,7 @@ body {
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
+.main-nav a, .modal .header .title, .modal .header .close-modal, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view, .modal {
@@ -2827,7 +2827,7 @@ body {
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
+.main-nav a, .modal .header .title, .modal .header .close-modal, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view, .modal {
@@ -2930,7 +2930,7 @@ body {
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
+.main-nav a, .modal .header .title, .modal .header .close-modal, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view, .modal {
@@ -2999,7 +2999,7 @@ body {
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
+.main-nav a, .modal .header .title, .modal .header .close-modal, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view, .modal {
@@ -3093,7 +3093,7 @@ body {
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
+.main-nav a, .modal .header .title, .modal .header .close-modal, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view, .modal {
@@ -3166,7 +3166,7 @@ body {
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
+.main-nav a, .modal .header .title, .modal .header .close-modal, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view, .modal {
@@ -3269,7 +3269,7 @@ body {
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
+.main-nav a, .modal .header .title, .modal .header .close-modal, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view, .modal {
@@ -3315,13 +3315,12 @@ body {
 .modal {
   background-color: rgba(0, 0, 0, 0.75);
   overflow-y: scroll;
-  padding-bottom: 50px;
+  padding: 0 1.5rem 50px;
   padding-top: 50px;
   z-index: 2; }
   .modal .modal-container {
     margin: 0 auto;
-    max-width: 1100px;
-    padding: 0 1.5rem; }
+    max-width: 1100px; }
   .modal .header {
     background-color: #4e83b0;
     border-top-left-radius: 6px;
@@ -3332,6 +3331,12 @@ body {
       font-size: 1.375rem;
       padding-left: 2rem;
       padding-top: 0.125rem; }
+    .modal .header .close-modal {
+      font-size: 2rem;
+      padding-right: 1rem;
+      text-align: right; }
+      .modal .header .close-modal a {
+        color: #fff !important; }
   .modal .body {
     background-color: #f0f0f0;
     border-bottom-left-radius: 6px;
@@ -3382,7 +3387,7 @@ body {
 .modal .header .title {
   color: #fff; }
 
-.main-nav a, .modal .header .title, .portfolio .portfolio-loading {
+.main-nav a, .modal .header .title, .modal .header .close-modal, .portfolio .portfolio-loading {
   font-weight: lighter; }
 
 .main-view, .modal {

@@ -11,8 +11,6 @@
   </div>
 </div>
 
-<div class="modal">
-  <div class="modal-container">
   <?php
     if ( have_posts() ) {
       while ( have_posts() ) { the_post(); ?>
@@ -25,11 +23,14 @@
             $category_slug = $category->slug;
           }
         ?>
-        <?php include('templates/portfolio-single.php'); ?>
+
+        <div class="modal <?php echo $category_slug; ?>">
+          <div class="modal-container">
+            <?php include('templates/portfolio-single.php'); ?>
+          </div>
+        </div>
       <?php }
     }
   ?>
-  </div>
-</div>
 
 <?php get_footer(); ?>

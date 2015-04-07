@@ -4,14 +4,13 @@
   @extend %fixed-window;
   background-color: rgba(0, 0, 0, 0.75);
   overflow-y: scroll;
-  padding-bottom: $modal-header-height;
+  padding: 0 $mobile-lr-padding $modal-header-height;
   padding-top: $modal-header-height;
   z-index: 2;
 
   .modal-container {
     margin: 0 auto;
     max-width: 1100px;
-    padding: 0 $mobile-lr-padding;
   }
 
   .header {
@@ -28,6 +27,17 @@
       font-size: 1.375rem;
       padding-left: 2rem;
       padding-top: 0.125rem;
+    }
+
+    .close-modal {
+      @extend %lighter-font;
+      font-size: 2rem;
+      padding-right: 1rem;
+      text-align: right;
+
+      a {
+        color: #fff !important;
+      }
     }
   }
 

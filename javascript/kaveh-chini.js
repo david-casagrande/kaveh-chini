@@ -1,9 +1,28 @@
 (function() {
   'use strict';
 
+  function checkCtrlClick(e) {
+    return e.ctrlKey || e.metaKey;
+  }
+
+  function parseUrlSlug(href) {
+    var url = href.split('/'),
+        lastItem = url.pop();
+
+    if(!lastItem || href.indexOf('?') > -1) {
+      lastItem = url.pop();
+    }
+    return lastItem;
+  }
+
+  function parseQueryParam() {
+    var search = document.location.search;
+    return search ? search.split('portfolio_item=')[1] : null;
+  }
+
   //mobile nav toggle
   (function mobileNav() {
-    var navToggle = document.querySelector('.nav-toggle');
+    var navToggle = document.querySelector('.mobile-nav-toggle .nav-toggle');
 
     navToggle.addEventListener('click', function(e) {
       e.preventDefault();
@@ -30,13 +49,13 @@
     //handle initial state after images have loaded
     imagesLoaded(portfolioItems, function() {
       document.querySelector('.portfolio').classList.add('loaded');
-      var filter = parseFilterUrl(document.location.href);
+      var filter = parseUrlSlug(document.location.href);
       updateFilter(filter);
     });
 
     //handle browser back/forward nav
     window.onpopstate = function() {
-      var filter = parseFilterUrl(document.location.href);
+      var filter = parseUrlSlug(document.location.href);
       updateFilter(filter);
     };
 
@@ -56,26 +75,16 @@
       if(!parentClassList.contains('filter')) { return; }
 
       var href = filter.getAttribute('href');
-      var filterName = parseFilterUrl(href);
+      var filterName = parseUrlSlug(href);
       allFilters.push(filterName);
 
       filter.addEventListener('click', function(e) {
+        if(checkCtrlClick(e)) { return; }
         e.preventDefault();
         updateFilter(filterName);
         filterReplaceState(this);
       });
     });
-
-    function parseFilterUrl(href) {
-      var url = href.split('/'),
-          lastItem = url.pop();
-
-      if(!lastItem) {
-        lastItem = url.pop();
-      }
-
-      return lastItem;
-    }
 
     function updateFilter(filter) {
       var filterName;
@@ -109,191 +118,162 @@
     }
   })();
 
-  // var router = new RouteRecognizer();
-  //
-  // router.add([
-  //   { path: '/portfolio/:category', handler: function(category) { console.log(category); } },
-  // ]);
+  (function portfolioItemModal() {
+    var portfolioItems = document.querySelectorAll('.portfolio-items li');
 
-  // mainNavFilters.addEventListener('click', function(e) {
-  //   e.preventDefault();
-  //   console.log(e);
-  // });
+    //dont attach if not a portfolio page
+    if(portfolioItems.length < 1) { return; }
 
-  // var iso = new Isotope( '#container', {
-  //   // options
-  // });
-  // $container.isotope({
-  //   // options
-  //   itemSelector: '.item',
-  //   layoutMode: 'fitRows'
-  // });
+    //handle browser back/forward nav
+    window.onpopstate = function() {
+      var search = parseQueryParam();
+      if(search) {
+        openModal(search);
+      } else {
+        closeModalOnHistory();
+      }
+    };
 
-  // var Modal = {
-  //
-  //   create: function(child) {
-  //     this._bindNavigation();
-  //     var modal = this._createModal();
-  //     modal.appendChild(child);
-  //     return document.body.appendChild(modal);
-  //   },
-  //
-  //   _createModal: function() {
-  //     var modal = document.createElement('div'),
-  //         closeButton = this._createCloseButton(),
-  //         self = this;
-  //
-  //     modal.className = 'modal';
-  //     modal.setAttribute('role', 'dialog');
-  //     modal.setAttribute('tabindex', '1');
-  //     modal.onclick = function(e) {
-  //       if(e.target === this) { self._destroyModal(this); }
-  //     }
-  //     closeButton.onclick = function(e) {
-  //       e.preventDefault();
-  //       self._destroyModal(modal);
-  //     }
-  //     modal.appendChild(closeButton);
-  //     //setTimeout(function() {
-  //       modal.className = modal.className + ' open';
-  //     //});
-  //
-  //     document.body.style.overflow = 'hidden';
-  //     return modal;
-  //   },
-  //
-  //   _createCloseButton: function() {
-  //     var closeButton = document.createElement('a');
-  //     closeButton.href = '#';
-  //     closeButton.title = 'Close Modal';
-  //     closeButton.className = 'close-modal';
-  //     closeButton.appendChild(document.createTextNode('×'));
-  //     return closeButton;
-  //   },
-  //
-  //   _destroyModal: function(modal) {
-  //     if(!modal) { return; }
-  //     document.body.removeChild(modal);
-  //     document.body.style.overflow = null;
-  //     this._unbindNavigation();
-  //   },
-  //
-  //   _bindNavigation: function() {
-  //     var self = this;
-  //     window.addEventListener('keyup', this._navigate);
-  //   },
-  //
-  //   _unbindNavigation: function() {
-  //     window.removeEventListener('keyup', this._navigate);
-  //   },
-  //
-  //   _navigate: function(e) {
-  //     e.preventDefault();
-  //     var key = e.keyCode;
-  //
-  //     var gallery = document.getElementsByClassName('image-gallery')[0],
-  //         images = gallery.getElementsByClassName('image'),
-  //         modal = document.getElementsByClassName('modal')[0],
-  //         currentImage = modal.getElementsByTagName('img')[0];
-  //
-  //
-  //     function imageIterator(callback) {
-  //       for(var x = 0; x < images.length; x++) {
-  //         var href = images[x].childNodes[0].href;
-  //         if(href === currentImage.getAttribute('src')) {
-  //           return callback(x);
-  //         }
-  //       }
-  //     }
-  //
-  //     if(key === 37) { //left
-  //       imageIterator(function(index) {
-  //         var idx = index - 1;
-  //         if(idx < 0) { return; }
-  //         var src = images[idx].childNodes[0].href;
-  //         return currentImage.setAttribute('src', src);
-  //       });
-  //     } else if(key === 39) { //right
-  //       imageIterator(function(index) {
-  //         var idx = index + 1;
-  //         if(idx >= images.length) { return; }
-  //         var src = images[idx].childNodes[0].href;
-  //         return currentImage.setAttribute('src', src);
-  //       });
-  //     } else if(key === 27) {
-  //       Modal._unbindNavigation(document.getElementsByClassName('modal')[0]);
-  //     }
-  //   }
-  //
-  // };
-  //
-  // function galleryClick(e) {
-  //   e.preventDefault();
-  //   var imgSrc = e.target.parentNode.getAttribute('href'), galleryMainImage;
-  //   galleryMainImage = e.target.offsetParent.getElementsByClassName('gallery-main-image')[0];
-  //   if(galleryMainImage.getAttribute('src') === imgSrc) { return; }
-  //   galleryMainImage.setAttribute('src', imgSrc);
-  // }
-  //
-  // function imageGalleryClick(e) {
-  //   e.preventDefault();
-  //   var imgSrc = e.target.parentNode.getAttribute('href');
-  //   var img = new Image();
-  //   img.src = imgSrc;
-  //   var modal = Modal.create(img);
-  //   modal.focus();
-  // }
-  //
-  // function galleryNavigate(idx) {
-  //
-  //   var gallery = document.getElementsByClassName('image-gallery')[0],
-  //       galleryWidth = gallery.clientWidth;
-  //
-  //   if(idx) {
-  //     galleryWidth = -galleryWidth;
-  //   }
-  //
-  //   gallery.leftScroll = gallery.scrollLeft += galleryWidth;
-  //   //scrollTo(gallery, galleryWidth, 400);
-  // }
-  //
-  // function scrollTo(element, difference, duration, end) {
-  //   var nextPosition = element.scrollLeft + difference,
-  //       perTick = (difference / duration) * 10;
-  //
-  //   end = end || nextPosition;
-  //   setTimeout(function() {
-  //     element.scrollLeft = element.scrollLeft + perTick;
-  //     if (element.scrollLeft === end) return;
-  //     //scrollTo(element, to, duration - 10);
-  //   }, 10);
-  //
-  //   // var to = element.scrollLeft + next,
-  //   //     difference = element.scrollLeft +
-  //   //     perTick = difference / 300 * duration,
-  //   //     to = element.scrollLeft += difference;
-  //
-  //   // setTimeout(function() {
-  //   //   element.scrollLeft = element.scrollLeft + perTick;
-  //   //   if (element.scrollLeft === to) return;
-  //   //   scrollTo(element, to, duration - 10);
-  //   // }, 10);
-  //
-  //   // if (duration < 0) return;
-  //   // var difference = to - element.scrollLeft;
-  //   // var perTick = difference / duration * 10;
-  //   //
-  //   // setTimeout(function() {
-  //   //     element.scrollLeft = element.scrollLeft + perTick;
-  //   //     if (element.scrollLeft === to) return;
-  //   //     scrollTo(element, to, duration - 10);
-  //   // }, 10);
-  // }
-  //
-  // window.SILL_LIFE = {
-  //   galleryClick: galleryClick,
-  //   imageGalleryClick: imageGalleryClick,
-  //   galleryNavigate: galleryNavigate
-  // };
+    //handle initial state
+
+    (function init() {
+      var search = parseQueryParam();
+      if(!search) { return; }
+      openModal(search);
+    })();
+
+    Array.prototype.filter.call(portfolioItems, function(item) {
+
+      item.addEventListener('click', function(e) {
+        if(checkCtrlClick(e)) { return; }
+        e.preventDefault();
+        var a = item.querySelector('a');
+        var slug = parseUrlSlug(a.getAttribute('href'));
+        openModal(slug);
+        updateUrl(slug);
+      });
+    });
+
+    function updateUrl(slug) {
+      var pageUrl = '?portfolio_item=' + slug;
+      history.pushState(null, null, pageUrl);
+    }
+
+    function openModal(slug) {
+      getItem(slug, function(response) {
+        var json = JSON.parse(response.responseText);
+        createModal(json);
+      });
+    }
+
+    function getItem(slug, callback) {
+      var req = new XMLHttpRequest();
+      req.onload = function() {
+        callback(req);
+      };
+      req.open('get', '/wp-admin/admin-ajax?action=portfolio&slug='+slug, true);
+      req.send();
+    }
+
+    function closeModalOnClick(e) {
+      var target = e.target;
+      if(target.classList.contains('modal') || target.classList.contains('close-modal-button')) {
+        closeModal();
+        history.pushState(null, null, window.location.href.split('?')[0]);
+      }
+    }
+
+    function closeModalOnHistory() {
+      closeModal();
+    }
+
+    function closeModal() {
+      var modal = document.querySelector('.modal');
+      if(!modal) { return; }
+      modal.removeEventListener('click', closeModalOnClick);
+      modal.remove();
+    }
+
+    function createModal(data) {
+      var modal = document.createElement('div');
+      modal.className = 'modal ' + data.portfolio.category_slug; //jshint ignore:line
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('tabindex', '1');
+
+      modal.addEventListener('click', closeModalOnClick);
+
+      var modalContainer = createModalContainer();
+      modalContainer.appendChild(createModalHeader(data));
+      modalContainer.appendChild(createModalBody(data));
+
+      modal.appendChild(modalContainer);
+      return document.body.appendChild(modal);
+    }
+
+    function createModalContainer() {
+      var modalContainer = document.createElement('div');
+      modalContainer.className = 'modal-container';
+      return modalContainer;
+    }
+
+    function createModalHeader(data) {
+      var header = document.createElement('div');
+      header.className = 'header display-table';
+
+      var title = document.createElement('div');
+      title.className = 'title display-table-cell';
+
+      var closeButton = document.createElement('a');
+      closeButton.className = 'close-modal-button';
+      closeButton.appendChild(document.createTextNode('×'));
+
+      var close = document.createElement('div');
+      close.appendChild(closeButton);
+      close.className = 'close-modal display-table-cell';
+
+      var text = document.createTextNode(data.portfolio.title);
+
+      title.appendChild(text);
+      header.appendChild(title);
+      header.appendChild(close);
+
+      return header;
+    }
+
+    function createModalBody(data) {
+      var body = document.createElement('div');
+      body.className = 'body display-table';
+      body.appendChild(createMedia(data));
+      body.appendChild(createNarrative(data));
+      return body;
+    }
+
+    function createMedia(data) {
+      var media = document.createElement('div');
+      media.className = 'media display-table-cell align-top';
+
+      var images = data.portfolio.images.map(function(img) { return '<img src="'+img+'" />'; });
+      var videos = data.portfolio.videos;
+      var html = '';
+
+      if(videos.length > 0) {
+        html = html + videos.join();
+      }
+
+      if(images.length > 0) {
+        html = html + images.join();
+      }
+
+      media.innerHTML = html;
+      return media;
+    }
+
+    function createNarrative(data) {
+      var narrative = document.createElement('div');
+      narrative.className = 'narrative display-table-cell align-top';
+      narrative.innerHTML = data.portfolio.narrative;
+      return narrative;
+    }
+  })();
 
 })();

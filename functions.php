@@ -6,6 +6,7 @@
   include($template_directory.'/functions/custom_post_types/portfolio.php');
   include($template_directory.'/functions/enque_styles.php');
   include($template_directory.'/functions/enque_scripts.php');
+  include($template_directory.'/functions/ajax/portfolio.php');
 
   function register_menus() {
     $menus = array(
