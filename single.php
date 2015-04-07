@@ -25,7 +25,7 @@
         ?>
 
         <div class="modal <?php echo $category_slug; ?>">
-          <div class="modal-container">
+          <div class="modal-container loaded">
             <?php include('templates/portfolio-single.php'); ?>
           </div>
         </div>
