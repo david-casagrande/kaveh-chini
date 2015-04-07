@@ -3257,7 +3257,7 @@ body {
 .modal {
   background-color: rgba(0, 0, 0, 0.75);
   overflow-y: scroll;
-  padding: 25px 1.5rem 25px;
+  padding: 25px 1.5rem;
   z-index: 2; }
   .modal .modal-container {
     margin: 0 auto;

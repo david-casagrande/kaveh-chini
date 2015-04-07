@@ -54,10 +54,10 @@
     });
 
     //handle browser back/forward nav
-    window.onpopstate = function() {
+    window.addEventListener('popstate', function() {
       var filter = parseUrlSlug(document.location.href);
       updateFilter(filter);
-    };
+    });
 
     //handle logo click
     var logo = document.querySelector('.logo a');
@@ -125,17 +125,16 @@
     if(portfolioItems.length < 1) { return; }
 
     //handle browser back/forward nav
-    window.onpopstate = function() {
+    window.addEventListener('popstate', function() {
       var search = parseQueryParam();
       if(search) {
         openModal(search);
       } else {
         closeModalOnHistory();
       }
-    };
+    });
 
     //handle initial state
-
     (function init() {
       var search = parseQueryParam();
       if(!search) { return; }
