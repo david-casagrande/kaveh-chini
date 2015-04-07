@@ -2812,64 +2812,6 @@ body {
 .align-top, .main-nav-table-cell, .logo-table-cell {
   vertical-align: top; }
 
-body {
-  background-color: #131509; }
-
-.page-narrative, .main-nav a, .portfolio .portfolio-loading {
-  color: #989997; }
-
-body {
-  font-family: 'Open Sans', sans-serif; }
-
-.main-nav a, .modal .header .title, .modal .narrative .title, .portfolio .portfolio-loading, .portfolio .portfolio-item:after {
-  text-transform: uppercase; }
-
-.modal .header .title {
-  color: #fff; }
-
-.main-nav a, .modal .header .title, .modal .header .close-modal, .portfolio .portfolio-loading {
-  font-weight: lighter; }
-
-.main-view, .modal {
-  height: 100%;
-  left: 0;
-  overflow-y: auto;
-  position: fixed;
-  top: 0;
-  width: 100%; }
-
-.portfolio .portfolio-loading, .portfolio .portfolio-item:after {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%; }
-
-.main-nav, .logo, .content {
-  border-left: 1px solid #989997;
-  padding: 0 20px; }
-
-.main-nav-table-cell, .logo-table-cell {
-  min-width: 164px;
-  width: 164px; }
-
-.main-nav a:hover, .main-nav ul li.current-menu-item a {
-  color: #786fb2; }
-
-.modal .media img {
-  width: 100%; }
-
-.display-table, .main-view-table {
-  display: table;
-  width: 100%; }
-
-.display-table-cell, .main-nav-table-cell, .logo-table-cell {
-  display: table-cell;
-  vertical-align: middle; }
-
-.align-top, .main-nav-table-cell, .logo-table-cell {
-  vertical-align: top; }
-
 .font-weight-100 {
   font-weight: 100 !important; }
 
@@ -3315,12 +3257,15 @@ body {
 .modal {
   background-color: rgba(0, 0, 0, 0.75);
   overflow-y: scroll;
-  padding: 0 1.5rem 50px;
-  padding-top: 50px;
+  padding: 25px 1.5rem 25px;
   z-index: 2; }
   .modal .modal-container {
     margin: 0 auto;
-    max-width: 1100px; }
+    max-width: 1100px;
+    transform: translate(0, 100%);
+    transition: transform 400ms; }
+    .modal .modal-container.loaded {
+      transform: translate(0, 0); }
   .modal .header {
     background-color: #4e83b0;
     border-top-left-radius: 6px;
@@ -3371,6 +3316,19 @@ body {
     width: 100%; }
   .modal .narrative {
     border-bottom-left-radius: 6px; } }
+
+@media only screen and (max-width: 40em) {
+  .modal {
+    padding: 0; }
+    .modal .media {
+      padding: 2.25rem 1.25rem 1.125rem; }
+    .modal .header .title {
+      padding-left: 1.25rem; }
+    .modal .narrative {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem; }
+    .modal .header, .modal .body, .modal .narrative {
+      border-radius: 0; } }
 
 body {
   background-color: #131509; }

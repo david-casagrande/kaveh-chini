@@ -163,6 +163,11 @@
       getItem(slug, function(response) {
         var json = JSON.parse(response.responseText);
         createModal(json);
+        setTimeout(function() {
+          var container = document.querySelector('.modal-container');
+          if(!container) { return; }
+          container.classList.add('loaded');
+        }, 10);
       });
     }
 
@@ -190,8 +195,15 @@
     function closeModal() {
       var modal = document.querySelector('.modal');
       if(!modal) { return; }
-      modal.removeEventListener('click', closeModalOnClick);
-      modal.remove();
+
+      var container = document.querySelector('.modal-container');
+      container.classList.remove('loaded');
+
+      //400ms set in css for modal
+      setTimeout(function() {
+        modal.removeEventListener('click', closeModalOnClick);
+        modal.remove();
+      }, 400);
     }
 
     function createModal(data) {
