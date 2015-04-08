@@ -268,11 +268,11 @@
       var html = '';
 
       if(videos.length > 0) {
-        html = html + videos.join();
+        html = html + videos.join('');
       }
 
       if(images.length > 0) {
-        html = html + images.join();
+        html = html + images.join('');
       }
 
       media.innerHTML = html;
