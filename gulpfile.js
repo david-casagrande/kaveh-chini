@@ -17,8 +17,8 @@ gulp.task('sass', function() {
 })
 
 gulp.task('minify-sass', ['sass'], function() {
-  gulp.src('./css/sill-life.css')
-    .pipe(rename('sill-life.min.css'))
+  gulp.src('./css/kaveh-chini.css')
+    .pipe(rename('kaveh-chini.min.css'))
     .pipe(minifyCSS())
     .pipe(gulp.dest('./css'))
 })
