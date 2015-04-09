@@ -3022,7 +3022,7 @@ body {
     border: 0 !important;
     padding: 0.563rem 1.5rem 0.875rem !important; }
     .main-nav ul {
-      font-size: 2.75rem; }
+      font-size: 2.25rem; }
       .main-nav ul li {
         padding: 0.5rem 0; } }
 
@@ -3091,7 +3091,7 @@ body {
 @media only screen and (max-width: 60em) {
   .logo-table-cell {
     display: table !important;
-    height: 148px;
+    height: 74px;
     padding: 0 1.5rem;
     width: 100% !important; }
   .logo {
@@ -3100,7 +3100,7 @@ body {
     padding: 0 !important;
     vertical-align: middle; }
     .logo img {
-      height: 100px;
+      height: 50px;
       width: auto; } }
 
 body {
@@ -3169,21 +3169,21 @@ body {
 .nav-toggle {
   cursor: pointer;
   display: inline-block;
-  padding: 10px 75px 16px 0; }
+  padding: 10px 46px 16px 0; }
   .nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
     background: #d8d8d8;
     border-radius: 4px;
     content: '';
     cursor: pointer;
     display: block;
-    height: 10px;
+    height: 5px;
     position: absolute;
     transition: all 500ms ease-in-out;
-    width: 75px; }
+    width: 46px; }
   .nav-toggle span:before {
-    top: -18px; }
+    top: -12px; }
   .nav-toggle span:after {
-    bottom: -18px; }
+    bottom: -12px; }
   .nav-toggle.active span {
     background-color: transparent; }
   .nav-toggle.active span:before, .nav-toggle.active span:after {
