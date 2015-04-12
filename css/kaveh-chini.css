@@ -3339,6 +3339,14 @@ body {
     .modal .header, .modal .body, .modal .narrative {
       border-radius: 0; } }
 
+@media only screen and (min-width:90.063em) and (max-width:120em) {
+  .modal .modal-container {
+    max-width: 1400px; } }
+
+@media only screen and (min-width:120.063em) and (max-width:999999999999) {
+  .modal .modal-container {
+    max-width: 1600px; } }
+
 body {
   background-color: #131509; }
 

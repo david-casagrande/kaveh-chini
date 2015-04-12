@@ -133,3 +133,15 @@
 
   }
 }
+
+@media #{$xlarge-only} {
+  .modal .modal-container {
+    max-width: 1400px;
+  }
+}
+
+@media #{$xxlarge-only} {
+  .modal .modal-container {
+    max-width: 1600px;
+  }
+}
