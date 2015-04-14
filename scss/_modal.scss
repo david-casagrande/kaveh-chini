@@ -136,12 +136,12 @@
 
 @media #{$xlarge-only} {
   .modal .modal-container {
-    max-width: 1400px;
+    max-width: 1300px;
   }
 }
 
-@media #{$xxlarge-only} {
+@media #{$xxlarge-up} {
   .modal .modal-container {
-    max-width: 1600px;
+    max-width: 1450px;
   }
 }

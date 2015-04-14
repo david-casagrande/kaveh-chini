@@ -3341,11 +3341,11 @@ body {
 
 @media only screen and (min-width:90.063em) and (max-width:120em) {
   .modal .modal-container {
-    max-width: 1400px; } }
+    max-width: 1300px; } }
 
-@media only screen and (min-width:120.063em) and (max-width:999999999999) {
+@media only screen and (min-width:120.063em) {
   .modal .modal-container {
-    max-width: 1600px; } }
+    max-width: 1450px; } }
 
 body {
   background-color: #131509; }
