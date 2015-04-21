@@ -26,9 +26,22 @@
 
     navToggle.addEventListener('click', function(e) {
       e.preventDefault();
-      this.classList.toggle('active');
+      toggleNavToggle();
       toggleMainNav();
     });
+
+    var mainNavFilters = document.querySelectorAll('.main-nav a');
+    var allFilters = [];
+    Array.prototype.filter.call(mainNavFilters, function(filter) {
+      filter.addEventListener('click', function(e) {
+        toggleNavToggle();
+        toggleMainNav();
+      });
+    });
+
+    function toggleNavToggle() {
+      navToggle.classList.toggle('active');
+    }
 
     function toggleMainNav() {
       var mainNav = document.querySelector('.main-nav-table-cell');

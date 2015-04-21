@@ -3,9 +3,9 @@
 .modal {
   @extend %fixed-window;
   background-color: rgba(0, 0, 0, 0.75);
-  overflow-y: scroll;
   padding: $modal-header-height/2 $mobile-lr-padding;
   z-index: 2;
+  -webkit-overflow-scrolling: touch;
 
   .modal-container {
     margin: 0 auto;

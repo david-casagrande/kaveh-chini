@@ -2925,7 +2925,8 @@ body {
   vertical-align: top; }
 
 .main-view {
-  padding: 2.375rem 2rem; }
+  padding: 2.375rem 2rem;
+  -webkit-overflow-scrolling: touch; }
   .customize-support .main-view {
     top: 32px; }
 
@@ -3265,9 +3266,9 @@ body {
 
 .modal {
   background-color: rgba(0, 0, 0, 0.75);
-  overflow-y: scroll;
   padding: 25px 1.5rem;
-  z-index: 2; }
+  z-index: 2;
+  -webkit-overflow-scrolling: touch; }
   .modal .modal-container {
     margin: 0 auto;
     max-width: 1100px;

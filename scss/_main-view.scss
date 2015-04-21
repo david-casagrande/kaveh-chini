@@ -8,6 +8,7 @@
 
   @extend %fixed-window;
   padding: 2.375rem 2rem;
+  -webkit-overflow-scrolling: touch;
 
   .customize-support & {
     top: $wp-admin-bar-height;
