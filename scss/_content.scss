@@ -8,7 +8,10 @@
   .content {
     border: 0 !important;
     display: block !important;
-    padding: 1.25rem $mobile-lr-padding 0 $mobile-lr-padding !important;
+    padding: 0.25rem $mobile-lr-padding 0 $mobile-lr-padding !important;
   }
 
+  .content.mobile-nav-open {
+    //padding-top: 1.25rem !important
+  }
 }
