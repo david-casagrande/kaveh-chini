@@ -23,21 +23,26 @@
   //mobile nav toggle
   (function mobileNav() {
     var navToggle = document.querySelector('.mobile-nav-toggle .nav-toggle');
+    var content = document.querySelector('.content');
 
     navToggle.addEventListener('click', function(e) {
       e.preventDefault();
-      toggleNavToggle();
-      toggleMainNav();
+      toggleAll();
     });
 
     var mainNavFilters = document.querySelectorAll('.main-nav a');
     var allFilters = [];
     Array.prototype.filter.call(mainNavFilters, function(filter) {
       filter.addEventListener('click', function(e) {
-        toggleNavToggle();
-        toggleMainNav();
+        toggleAll();
       });
     });
+
+    function toggleAll() {
+      toggleNavToggle();
+      toggleMainNav();
+      toggleContent();
+    }
 
     function toggleNavToggle() {
       navToggle.classList.toggle('active');
@@ -46,6 +51,10 @@
     function toggleMainNav() {
       var mainNav = document.querySelector('.main-nav-table-cell');
       mainNav.classList.toggle('display-block');
+    }
+
+    function toggleContent() {
+      content.classList.toggle('mobile-nav-open');
     }
   })();
 

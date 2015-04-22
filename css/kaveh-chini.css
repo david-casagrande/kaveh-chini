@@ -3022,9 +3022,9 @@ body {
     border: 0 !important;
     padding: 0.563rem 1.5rem 0.875rem !important; }
     .main-nav ul {
-      font-size: 2.75rem; }
+      font-size: 1.75rem; }
       .main-nav ul li {
-        padding: 0.5rem 0; } }
+        padding: 0.375rem 0; } }
 
 @media only screen and (min-width:60.063em) {
   .main-nav-table-cell.display-block {
@@ -3091,7 +3091,7 @@ body {
 @media only screen and (max-width: 60em) {
   .logo-table-cell {
     display: table !important;
-    height: 148px;
+    height: 74px;
     padding: 0 1.5rem;
     width: 100% !important; }
   .logo {
@@ -3100,7 +3100,7 @@ body {
     padding: 0 !important;
     vertical-align: middle; }
     .logo img {
-      height: 100px;
+      height: 50px;
       width: auto; } }
 
 body {
@@ -3169,29 +3169,31 @@ body {
 .nav-toggle {
   cursor: pointer;
   display: inline-block;
-  padding: 10px 75px 16px 0; }
+  padding: 10px 42px 16px 0; }
   .nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
     background: #d8d8d8;
     border-radius: 4px;
     content: '';
     cursor: pointer;
     display: block;
-    height: 10px;
+    height: 5px;
     position: absolute;
     transition: all 500ms ease-in-out;
-    width: 75px; }
+    width: 42px; }
   .nav-toggle span:before {
-    top: -18px; }
+    top: -10px; }
   .nav-toggle span:after {
-    bottom: -18px; }
+    bottom: -10px; }
   .nav-toggle.active span {
     background-color: transparent; }
   .nav-toggle.active span:before, .nav-toggle.active span:after {
     top: 0; }
   .nav-toggle.active span:before {
-    transform: rotate(45deg); }
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg); }
   .nav-toggle.active span:after {
-    transform: rotate(-45deg); }
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); }
 
 @media only screen and (max-width: 60em) {
   .mobile-nav-toggle {
@@ -3204,7 +3206,7 @@ body {
   .content {
     border: 0 !important;
     display: block !important;
-    padding: 1.25rem 1.5rem 0 1.5rem !important; } }
+    padding: 0.25rem 1.5rem 0 1.5rem !important; } }
 
 body {
   background-color: #131509; }

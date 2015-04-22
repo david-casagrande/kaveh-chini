@@ -8,9 +8,9 @@
 
 //shamelessly stolen from http://codepen.io/elijahmanor/pen/Igpoe
 
-$nav-toggle-width: 75px;
-$nav-toggle-height: 10px;
-$nav-toggle-offset: 18px;
+$nav-toggle-width: 42px;
+$nav-toggle-height: 5px;
+$nav-toggle-offset: 10px;
 
 .nav-toggle {
   cursor: pointer;
@@ -52,10 +52,13 @@ $nav-toggle-offset: 18px;
 
     span:before {
       transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+
     }
 
     span:after {
       transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
     }
 
   }
